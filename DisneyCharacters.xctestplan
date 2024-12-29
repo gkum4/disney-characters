@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "9ADA2EF6-E05B-44CB-AD60-4993DE796C7F",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:DisneyCharacters.xcodeproj",
+      "identifier" : "0C73D5872D20A557007BBECE",
+      "name" : "DisneyCharacters"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:DisneyCharacters.xcodeproj",
+        "identifier" : "0C73D59D2D20A558007BBECE",
+        "name" : "DisneyCharactersTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:DisneyCharacters.xcodeproj",
+        "identifier" : "0C73D5A72D20A558007BBECE",
+        "name" : "DisneyCharactersUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
