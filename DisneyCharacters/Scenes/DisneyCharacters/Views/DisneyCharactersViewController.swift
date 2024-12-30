@@ -68,9 +68,14 @@ final class DisneyCharactersViewController: CustomViewController {
     private var favoritesView: Bool = false
     
     private let viewModel: DisneyCharactersViewModel
+    private weak var coordinator: DisneyCharactersCoordinatorProtocol?
     
-    private init(viewModel: DisneyCharactersViewModel) {
+    private init(
+        viewModel: DisneyCharactersViewModel,
+        coordinator: DisneyCharactersCoordinatorProtocol
+    ) {
         self.viewModel = viewModel
+        self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -221,7 +226,12 @@ extension DisneyCharactersViewController: UISearchBarDelegate {
 }
 
 extension DisneyCharactersViewController {
-    static func create() -> DisneyCharactersViewController {
-        return DisneyCharactersViewController(viewModel: DisneyCharactersViewModel())
+    static func create(
+        coordinator: DisneyCharactersCoordinatorProtocol
+    ) -> DisneyCharactersViewController {
+        return DisneyCharactersViewController(
+            viewModel: DisneyCharactersViewModel(),
+            coordinator: coordinator
+        )
     }
 }
