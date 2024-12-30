@@ -20,12 +20,13 @@ class DisneyCharactersViewModel {
     private var keyword: String?
     private var currentPage: Int = 1
     private var totalPages: Int = 0
+    private var isFetchingNextPage: Bool = false
     
     private let pageSize: Int
     private let fetchCharactersPageService: FetchDisneyCharactersPageServiceProtocol
     
     init(
-        pageSize: Int = 20,
+        pageSize: Int = 30,
         fetchCharactersPageService: FetchDisneyCharactersPageServiceProtocol = FetchDisneyCharactersPageService()
     ) {
         self.pageSize = pageSize
@@ -53,14 +54,18 @@ extension DisneyCharactersViewModel {
     }
     
     // MARK: - Pagination
-    func canFetchNextPage() -> Bool {
-        return currentPage <= totalPages
+    func canFetchNextPage(currentItem: Int) -> Bool {
+        return !isFetchingNextPage &&
+            currentPage <= totalPages &&
+            currentItem >= charactersCount - 4
     }
     
     func fetchNextPage() async {
         currentPage += 1
         
+        isFetchingNextPage = true
         await fetchCharacters()
+        isFetchingNextPage = false
     }
     
     // MARK: - Keyword Search

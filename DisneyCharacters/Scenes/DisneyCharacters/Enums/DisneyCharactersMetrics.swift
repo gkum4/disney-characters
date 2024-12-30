@@ -9,10 +9,12 @@ import Foundation
 
 enum DisneyCharactersMetrics {
     static let spacingBetweenCells: CGFloat = 10
+    static let navigationBarHeight: CGFloat = 44
     
     enum Cell {
         static let padding: CGFloat = 10
-        static let imageHeight: CGFloat = 150
-        static let imageWidth: CGFloat = 100
+        static let imageHeight: CGFloat = 180
+        static let imageWidth: CGFloat = 120
+        static let height: CGFloat = 230
     }
 }

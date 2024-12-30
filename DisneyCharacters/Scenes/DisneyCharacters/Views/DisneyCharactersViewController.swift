@@ -8,13 +8,6 @@
 import UIKit
 
 final class DisneyCharactersViewController: UIViewController {
-    private lazy var collectionViewLayout: UICollectionViewFlowLayout = {
-        let size = UIScreen.main.bounds.width/2 - GlobalLayoutMetrics.horizontalPadding - DisneyCharactersMetrics.spacingBetweenCells
-        let element = UICollectionViewFlowLayout()
-        element.itemSize = .init(width: size, height: size)
-        return element
-    }()
-    
     private lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.delegate = self
@@ -22,7 +15,30 @@ final class DisneyCharactersViewController: UIViewController {
         searchBar.barStyle = .default
         searchBar.placeholder = "Encontre seu personagem Disney"
         searchBar.setValue("Cancelar", forKey: "cancelButtonText")
+        searchBar.frame = CGRect(
+            x: 0,
+            y: 0,
+            width: view.frame.width,
+            height: DisneyCharactersMetrics.navigationBarHeight
+        )
         return searchBar
+    }()
+    
+    private lazy var collectionViewLayout: UICollectionViewFlowLayout = {
+        let flowLayout = UICollectionViewFlowLayout()
+        let size = UIScreen.main.bounds.width/2 - GlobalLayoutMetrics.contentPadding - DisneyCharactersMetrics.spacingBetweenCells
+        flowLayout.itemSize = CGSize(
+            width: UIScreen.main.bounds.width/2 - GlobalLayoutMetrics.contentPadding - DisneyCharactersMetrics.spacingBetweenCells,
+            height: DisneyCharactersMetrics.Cell.height
+        )
+        flowLayout.sectionInset = UIEdgeInsets(
+            top: GlobalLayoutMetrics.contentPadding,
+            left: GlobalLayoutMetrics.contentPadding,
+            bottom: GlobalLayoutMetrics.contentPadding,
+            right: GlobalLayoutMetrics.contentPadding
+        )
+        flowLayout.minimumLineSpacing = GlobalLayoutMetrics.contentPadding
+        return flowLayout
     }()
     
     private lazy var collectionView: UICollectionView = {
@@ -30,9 +46,10 @@ final class DisneyCharactersViewController: UIViewController {
             frame: .zero,
             collectionViewLayout: collectionViewLayout
         )
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .systemBackground
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.showsVerticalScrollIndicator = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()
@@ -45,6 +62,8 @@ final class DisneyCharactersViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    
+    private var searchTimer: Timer?
     
     private let viewModel: DisneyCharactersViewModel
     
@@ -98,9 +117,7 @@ extension DisneyCharactersViewController {
     }
     
     private func setupNavigationBar() {
-        let searchBarView = SearchBarView(searchBar: searchBar)
-        searchBarView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 44)
-        navigationItem.titleView = searchBarView
+        navigationItem.titleView = searchBar
     }
     
     @objc override func dismissKeyboard() {
@@ -132,9 +149,78 @@ extension DisneyCharactersViewController: UICollectionViewDelegate, UICollection
         cell.fill(with: viewModel.characters[indexPath.row])
         return cell
     }
+    
+    func collectionView(
+        _ collectionView: UICollectionView,
+        willDisplay cell: UICollectionViewCell,
+        forItemAt indexPath: IndexPath
+    ) {
+        guard viewModel.canFetchNextPage(currentItem: indexPath.item) else { return }
+        
+        Task {
+            await viewModel.fetchNextPage()
+            collectionView.reloadData()
+        }
+    }
 }
 
-extension DisneyCharactersViewController: UISearchBarDelegate {}
+extension DisneyCharactersViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchTimer?.invalidate()
+        searchTimer = .scheduledTimer(withTimeInterval: 0.5, repeats: false) { [weak self] _ in
+            guard let self else { return }
+            
+            Task { @MainActor in
+                self.loadingLabel.isHidden = false
+                
+                await self.viewModel.fetchCharacters(with: searchText)
+                self.searchBar.text = searchText
+                self.collectionView.reloadData()
+                
+                self.loadingLabel.isHidden = true
+            }
+        }
+    }
+    
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        navigationItem.rightBarButtonItem = nil
+        searchBar.setShowsCancelButton(true, animated: true)
+        navigationController?.navigationBar.layoutIfNeeded()
+        
+        UIView.animate(withDuration: 0.3) {
+            self.collectionView.alpha = 0.3
+            self.collectionView.transform = CGAffineTransform.identity.scaledBy(x: 0.99, y: 0.99)
+        }
+        
+        return true
+    }
+    
+    func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
+//        navigationItem.rightBarButtonItem = TODO
+        searchBar.setShowsCancelButton(false, animated: true)
+        
+        UIView.animate(withDuration: 0.3) {
+            self.collectionView.alpha = 1
+            self.collectionView.transform = .identity
+        }
+        
+        endSearchBarEditing()
+        
+        return true
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        endSearchBarEditing()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        endSearchBarEditing()
+    }
+    
+    private func endSearchBarEditing() {
+        searchBar.resignFirstResponder()
+    }
+}
 
 extension DisneyCharactersViewController {
     static func create() -> DisneyCharactersViewController {

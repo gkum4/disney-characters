@@ -14,7 +14,6 @@ final class DisneyCharacterCollectionViewCell: UICollectionViewCell {
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = DisneyCharactersMetrics.Cell.padding
         stackView.alignment = .center
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
@@ -22,14 +21,23 @@ final class DisneyCharacterCollectionViewCell: UICollectionViewCell {
     
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
+        imageView.layer.cornerRadius = 10
+        imageView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        imageView.clipsToBounds = true
+        imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
+    private lazy var labelContainerView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
-        label.numberOfLines = 0
+        label.numberOfLines = 2
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -51,7 +59,9 @@ final class DisneyCharacterCollectionViewCell: UICollectionViewCell {
         imageView.image = nil
         nameLabel.text = nil
     }
-    
+}
+
+extension DisneyCharacterCollectionViewCell {
     private func setupInterface() {
         contentView.backgroundColor = .gray
         contentView.layer.cornerRadius = GlobalLayoutMetrics.cornerRadius
@@ -59,20 +69,22 @@ final class DisneyCharacterCollectionViewCell: UICollectionViewCell {
         contentView.appendSubview(
             stackView.appendArrangedSubviews([
                 imageView,
-                nameLabel
+                labelContainerView.appendSubview(nameLabel)
             ])
         )
     }
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            imageView.heightAnchor.constraint(equalToConstant: DisneyCharactersMetrics.Cell.imageHeight),
-            imageView.widthAnchor.constraint(equalToConstant: DisneyCharactersMetrics.Cell.imageWidth),
+            stackView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             
-            stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: DisneyCharactersMetrics.Cell.padding),
-            stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -DisneyCharactersMetrics.Cell.padding),
-            stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: DisneyCharactersMetrics.Cell.padding),
-            stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -DisneyCharactersMetrics.Cell.padding),
+            nameLabel.topAnchor.constraint(equalTo: labelContainerView.topAnchor, constant: DisneyCharactersMetrics.Cell.padding),
+            nameLabel.bottomAnchor.constraint(equalTo: labelContainerView.bottomAnchor, constant: -DisneyCharactersMetrics.Cell.padding),
+            nameLabel.leadingAnchor.constraint(equalTo: labelContainerView.leadingAnchor, constant: DisneyCharactersMetrics.Cell.padding),
+            nameLabel.trailingAnchor.constraint(equalTo: labelContainerView.trailingAnchor, constant: -DisneyCharactersMetrics.Cell.padding),
         ])
     }
 }

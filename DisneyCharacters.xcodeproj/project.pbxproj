@@ -68,8 +68,8 @@
 		0C8352202D222FFA005384A9 /* DisneyCharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83521F2D222FFA005384A9 /* DisneyCharacterCollectionViewCell.swift */; };
 		0C8352242D22337D005384A9 /* GlobalLayoutMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352232D22337D005384A9 /* GlobalLayoutMetrics.swift */; };
 		0C8352262D2233B4005384A9 /* DisneyCharactersMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352252D2233B4005384A9 /* DisneyCharactersMetrics.swift */; };
-		0C8352282D223832005384A9 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352272D223832005384A9 /* UIStackView+.swift */; };
-		0C83522A2D2238AF005384A9 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352292D2238AF005384A9 /* UIView+.swift */; };
+		0C8352282D223832005384A9 /* UIStackView+Append.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352272D223832005384A9 /* UIStackView+Append.swift */; };
+		0C83522A2D2238AF005384A9 /* UIView+Append.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352292D2238AF005384A9 /* UIView+Append.swift */; };
 		0C83522D2D22398B005384A9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0C83522C2D22398B005384A9 /* Kingfisher */; };
 		0C8352372D224139005384A9 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352362D224139005384A9 /* TabBarController.swift */; };
 		0C83523E2D224386005384A9 /* TabBarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83523D2D224386005384A9 /* TabBarPage.swift */; };
@@ -161,8 +161,8 @@
 		0C83521F2D222FFA005384A9 /* DisneyCharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharacterCollectionViewCell.swift; sourceTree = "<group>"; };
 		0C8352232D22337D005384A9 /* GlobalLayoutMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalLayoutMetrics.swift; sourceTree = "<group>"; };
 		0C8352252D2233B4005384A9 /* DisneyCharactersMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharactersMetrics.swift; sourceTree = "<group>"; };
-		0C8352272D223832005384A9 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
-		0C8352292D2238AF005384A9 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		0C8352272D223832005384A9 /* UIStackView+Append.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Append.swift"; sourceTree = "<group>"; };
+		0C8352292D2238AF005384A9 /* UIView+Append.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Append.swift"; sourceTree = "<group>"; };
 		0C8352362D224139005384A9 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		0C83523D2D224386005384A9 /* TabBarPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPage.swift; sourceTree = "<group>"; };
 		0C8352402D2246BB005384A9 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
@@ -272,8 +272,7 @@
 		0C83514D2D20BEF0005384A9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				0C8352272D223832005384A9 /* UIStackView+.swift */,
-				0C8352292D2238AF005384A9 /* UIView+.swift */,
+				0C8352442D224DAB005384A9 /* Append */,
 				0C8352422D2247C7005384A9 /* UIViewController+.swift */,
 			);
 			path = Extensions;
@@ -705,6 +704,15 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		0C8352442D224DAB005384A9 /* Append */ = {
+			isa = PBXGroup;
+			children = (
+				0C8352292D2238AF005384A9 /* UIView+Append.swift */,
+				0C8352272D223832005384A9 /* UIStackView+Append.swift */,
+			);
+			path = Append;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -862,12 +870,12 @@
 				0C8351D02D21F2E5005384A9 /* ServiceTaskErrorMapper.swift in Sources */,
 				0C8352172D221126005384A9 /* DisneyCharactersError.swift in Sources */,
 				0C8351C02D210B38005384A9 /* FetchDisneyCharacterMapper.swift in Sources */,
-				0C8352282D223832005384A9 /* UIStackView+.swift in Sources */,
+				0C8352282D223832005384A9 /* UIStackView+Append.swift in Sources */,
 				0C83516B2D20C91C005384A9 /* FetchDisneyCharacterServiceProtocol.swift in Sources */,
 				0C8351CE2D21F288005384A9 /* HTTPTaskErrorMapperProtocol.swift in Sources */,
 				0C8351732D20CD98005384A9 /* HTTPClientProtocol.swift in Sources */,
 				0C8352262D2233B4005384A9 /* DisneyCharactersMetrics.swift in Sources */,
-				0C83522A2D2238AF005384A9 /* UIView+.swift in Sources */,
+				0C83522A2D2238AF005384A9 /* UIView+Append.swift in Sources */,
 				0C8352042D2203F8005384A9 /* DisneyCharactersPageResponse+Mock.swift in Sources */,
 				0C8352062D220437005384A9 /* DisneyCharactersPageInfoResponse+Mock.swift in Sources */,
 				0C8351BC2D210949005384A9 /* DecodeMapper.swift in Sources */,

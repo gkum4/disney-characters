@@ -8,6 +8,6 @@
 import UIKit
 
 enum GlobalLayoutMetrics {
-    static let horizontalPadding: CGFloat = 20
+    static let contentPadding: CGFloat = 20
     static let cornerRadius: CGFloat = 10
 }
