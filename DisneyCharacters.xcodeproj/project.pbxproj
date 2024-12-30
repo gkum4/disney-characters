@@ -83,8 +83,10 @@
 		0C8352682D23296D005384A9 /* DisneyCharacterDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352672D23296D005384A9 /* DisneyCharacterDetailsViewModel.swift */; };
 		0C83526B2D23297E005384A9 /* DisneyCharacterDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83526A2D23297E005384A9 /* DisneyCharacterDetailsCoordinator.swift */; };
 		0C83526E2D2330D6005384A9 /* DisneyCharacterDetailsMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83526D2D2330D6005384A9 /* DisneyCharacterDetailsMetrics.swift */; };
-		0C8352712D2338C1005384A9 /* DisneyCharacterDetailsMediaButtonItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352702D2338C1005384A9 /* DisneyCharacterDetailsMediaButtonItemView.swift */; };
 		0C8352732D233CB2005384A9 /* DisneyCharacterDetailsMediaSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352722D233CB2005384A9 /* DisneyCharacterDetailsMediaSectionView.swift */; };
+		0C8352752D234197005384A9 /* DisneyCharacterDetailsMediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352742D234197005384A9 /* DisneyCharacterDetailsMediaType.swift */; };
+		0C8352772D2346B9005384A9 /* DisneyCharacterDetailsMediaMenuLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352762D2346B9005384A9 /* DisneyCharacterDetailsMediaMenuLabelView.swift */; };
+		0C8352792D2349D5005384A9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352782D2349D5005384A9 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,8 +187,10 @@
 		0C8352672D23296D005384A9 /* DisneyCharacterDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharacterDetailsViewModel.swift; sourceTree = "<group>"; };
 		0C83526A2D23297E005384A9 /* DisneyCharacterDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharacterDetailsCoordinator.swift; sourceTree = "<group>"; };
 		0C83526D2D2330D6005384A9 /* DisneyCharacterDetailsMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharacterDetailsMetrics.swift; sourceTree = "<group>"; };
-		0C8352702D2338C1005384A9 /* DisneyCharacterDetailsMediaButtonItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharacterDetailsMediaButtonItemView.swift; sourceTree = "<group>"; };
 		0C8352722D233CB2005384A9 /* DisneyCharacterDetailsMediaSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharacterDetailsMediaSectionView.swift; sourceTree = "<group>"; };
+		0C8352742D234197005384A9 /* DisneyCharacterDetailsMediaType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharacterDetailsMediaType.swift; sourceTree = "<group>"; };
+		0C8352762D2346B9005384A9 /* DisneyCharacterDetailsMediaMenuLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharacterDetailsMediaMenuLabelView.swift; sourceTree = "<group>"; };
+		0C8352782D2349D5005384A9 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -690,6 +694,7 @@
 			isa = PBXGroup;
 			children = (
 				0C8352232D22337D005384A9 /* GlobalLayoutMetrics.swift */,
+				0C8352782D2349D5005384A9 /* Colors.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -818,6 +823,7 @@
 			isa = PBXGroup;
 			children = (
 				0C83526D2D2330D6005384A9 /* DisneyCharacterDetailsMetrics.swift */,
+				0C8352742D234197005384A9 /* DisneyCharacterDetailsMediaType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -825,8 +831,8 @@
 		0C83526F2D2338B3005384A9 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				0C8352702D2338C1005384A9 /* DisneyCharacterDetailsMediaButtonItemView.swift */,
 				0C8352722D233CB2005384A9 /* DisneyCharacterDetailsMediaSectionView.swift */,
+				0C8352762D2346B9005384A9 /* DisneyCharacterDetailsMediaMenuLabelView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -970,6 +976,7 @@
 				0C83526E2D2330D6005384A9 /* DisneyCharacterDetailsMetrics.swift in Sources */,
 				0C83516F2D20CB41005384A9 /* ServiceError.swift in Sources */,
 				0C8351762D20CE66005384A9 /* HTTPTaskResult.swift in Sources */,
+				0C8352752D234197005384A9 /* DisneyCharacterDetailsMediaType.swift in Sources */,
 				0C83525F2D22FCDA005384A9 /* AppCoordinator.swift in Sources */,
 				0C83515F2D20C44C005384A9 /* DisneyCharactersViewModel.swift in Sources */,
 				0C8351A32D20FC5A005384A9 /* FetchDisneyCharacterRequestBuilder.swift in Sources */,
@@ -980,6 +987,7 @@
 				0C83523E2D224386005384A9 /* TabBarPage.swift in Sources */,
 				0C83519D2D20F8FF005384A9 /* HTTPRequestBuilderProtocol.swift in Sources */,
 				0C8351512D20C0A9005384A9 /* DisneyCharactersViewController.swift in Sources */,
+				0C8352772D2346B9005384A9 /* DisneyCharacterDetailsMediaMenuLabelView.swift in Sources */,
 				0C8352612D22FDAF005384A9 /* DisneyCharactersCoordinator.swift in Sources */,
 				0C8351902D20F62A005384A9 /* DisneyCharacter.swift in Sources */,
 				0C83520A2D2204C2005384A9 /* DisneyCharacterDetailsResponse+Mock.swift in Sources */,
@@ -1013,8 +1021,8 @@
 				0C83517F2D20E075005384A9 /* HTTPTaskError.swift in Sources */,
 				0C73D58C2D20A557007BBECE /* AppDelegate.swift in Sources */,
 				0C8352682D23296D005384A9 /* DisneyCharacterDetailsViewModel.swift in Sources */,
-				0C8352712D2338C1005384A9 /* DisneyCharacterDetailsMediaButtonItemView.swift in Sources */,
 				0C8351DD2D21F559005384A9 /* FetchDisneyCharactersPageService.swift in Sources */,
+				0C8352792D2349D5005384A9 /* Colors.swift in Sources */,
 				0C83526B2D23297E005384A9 /* DisneyCharacterDetailsCoordinator.swift in Sources */,
 				0C8351922D20F64F005384A9 /* DisneyCharactersPage.swift in Sources */,
 				0C73D58E2D20A557007BBECE /* SceneDelegate.swift in Sources */,

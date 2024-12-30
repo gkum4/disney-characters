@@ -21,6 +21,8 @@ class CustomViewController: UIViewController {
 // MARK: - Loading
 extension CustomViewController {
     func showScreenLoading(isUserInteractionEnabled: Bool = false) {
+        guard activityIndicator.superview == nil else { return }
+        
         DispatchQueue.main.async { [self] in
             view.isUserInteractionEnabled = isUserInteractionEnabled
             

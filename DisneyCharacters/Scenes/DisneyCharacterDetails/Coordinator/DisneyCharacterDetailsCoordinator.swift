@@ -20,10 +20,8 @@ final class DisneyCharacterDetailsCoordinator: CoordinatorProtocol {
     }
     
     func start(with character: DisneyCharacter) {
-        let disneyCharacterDetailsView = DisneyCharacterDetailsView.create(character: character)
-        
         navigationController.show(
-            UIHostingController(rootView: disneyCharacterDetailsView),
+            UIHostingController(rootView: DisneyCharacterDetailsView.create(character: character)),
             sender: self
         )
     }

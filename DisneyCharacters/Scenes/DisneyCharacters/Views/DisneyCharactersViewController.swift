@@ -64,7 +64,9 @@ final class DisneyCharactersViewController: CustomViewController {
         return collectionView
     }()
     
+    private var searchTask: Task<Void, Never>?
     private var searchTimer: Timer?
+    
     private var favoritesView: Bool = false
     
     private let viewModel: DisneyCharactersViewModel
@@ -189,14 +191,15 @@ extension DisneyCharactersViewController: DisneyCharactersViewModelDelegate {
 extension DisneyCharactersViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchTimer?.invalidate()
+        searchTask?.cancel()
+        
         searchTimer = .scheduledTimer(withTimeInterval: 0.5, repeats: false) { [weak self] _ in
             guard let self else { return }
             
-            Task { @MainActor in
+            searchTask = Task { @MainActor in
                 self.showScreenLoading()
                 
                 await self.viewModel.fetchCharacters(with: searchText)
-                self.searchBar.text = searchText
                 self.collectionView.reloadData()
                 
                 self.hideScreenLoading()

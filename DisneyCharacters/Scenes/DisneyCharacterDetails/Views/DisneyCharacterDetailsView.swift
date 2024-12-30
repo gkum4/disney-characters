@@ -30,77 +30,24 @@ struct DisneyCharacterDetailsView: View {
         }
     }
     
-    private var filmsSectionView: some View {
-        VStack(alignment: .leading) {
-            Text("Filmes")
-                .font(.title2)
-                .fontWeight(.medium)
-            
-            ForEach(viewModel.character.films, id: \.self) { film in
-                DisneyCharacterDetailsMediaButtonItemView(name: film) {
-                    // TODO
-                }
-            }
-        }
-        .frame(minWidth: 0, maxWidth: .infinity)
-    }
-    
-    private var shortFilmsSectionView: some View {
-        VStack(alignment: .leading) {
-            Text("Curtas")
-                .font(.title2)
-                .fontWeight(.medium)
-            
-            ForEach(viewModel.character.shortFilms, id: \.self) { shortFilm in
-                DisneyCharacterDetailsMediaButtonItemView(name: shortFilm) {
-                    // TODO
-                }
-            }
-        }
-        .frame(minWidth: 0, maxWidth: .infinity)
-    }
-    
-    private var tvShowsSectionView: some View {
-        VStack(alignment: .leading) {
-            Text("Séries")
-                .font(.title2)
-                .fontWeight(.medium)
-            
-            ForEach(viewModel.character.tvShows, id: \.self) { tvShow in
-                DisneyCharacterDetailsMediaButtonItemView(name: tvShow) {
-                    // TODO
-                }
-            }
-        }
-        .frame(minWidth: 0, maxWidth: .infinity)
-    }
-    
     var body: some View {
         ScrollView(.vertical) {
             VStack {
                 KFImage(viewModel.character.imageUrl)
-                    .aspectRatio(contentMode: .fit)
-                    .frame(maxHeight: DisneyCharacterDetailsMetrics.imageHeight)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: DisneyCharacterDetailsMetrics.imageHeight)
                 
                 nameSectionView
                     .padding(.bottom, DisneyCharacterDetailsMetrics.padding)
                 
-                if !viewModel.character.films.isEmpty {
-                    filmsSectionView
-                        .padding(.bottom, DisneyCharacterDetailsMetrics.padding)
-                }
-                
-                if !viewModel.character.shortFilms.isEmpty {
-                    shortFilmsSectionView
-                        .padding(.bottom, DisneyCharacterDetailsMetrics.padding)
-                }
-                
-                if !viewModel.character.tvShows.isEmpty {
-                    tvShowsSectionView
-                        .padding(.bottom, DisneyCharacterDetailsMetrics.padding)
+                if let initialSelectedMediaType = viewModel.availableMediaTypes.first {
+                    DisneyCharacterDetailsMediaSectionView(
+                        initialSelectedMediaType: initialSelectedMediaType
+                    )
+                    .padding(.bottom, DisneyCharacterDetailsMetrics.padding)
                 }
             }
-            .frame(maxWidth: .infinity)
             .padding(.horizontal, GlobalLayoutMetrics.contentPadding)
         }
         .environmentObject(viewModel)

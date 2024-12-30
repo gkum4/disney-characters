@@ -31,8 +31,6 @@ class TabBarController: UITabBarController {
         appearance.backgroundEffect = UIBlurEffect(style: .light)
         appearance.stackedLayoutAppearance = {
             let itemAppearance = UITabBarItemAppearance()
-            itemAppearance.normal.iconColor = UIColor.darkGray
-            itemAppearance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
             itemAppearance.selected.iconColor = UIColor.purple
             itemAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.purple]
             return itemAppearance
