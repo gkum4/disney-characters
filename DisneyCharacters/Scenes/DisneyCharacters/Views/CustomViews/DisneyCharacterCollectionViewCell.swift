@@ -63,7 +63,7 @@ final class DisneyCharacterCollectionViewCell: UICollectionViewCell {
 
 extension DisneyCharacterCollectionViewCell {
     private func setupInterface() {
-        contentView.backgroundColor = .gray
+        contentView.backgroundColor = .systemGray
         contentView.layer.cornerRadius = GlobalLayoutMetrics.cornerRadius
         
         contentView.appendSubview(

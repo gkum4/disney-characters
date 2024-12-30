@@ -14,7 +14,6 @@ final class DisneyCharactersViewController: UIViewController {
         searchBar.searchBarStyle = .minimal
         searchBar.barStyle = .default
         searchBar.placeholder = "Encontre seu personagem Disney"
-        searchBar.setValue("Cancelar", forKey: "cancelButtonText")
         searchBar.frame = CGRect(
             x: 0,
             y: 0,
@@ -22,6 +21,17 @@ final class DisneyCharactersViewController: UIViewController {
             height: DisneyCharactersMetrics.navigationBarHeight
         )
         return searchBar
+    }()
+    
+    private lazy var starBarButtonItem: UIBarButtonItem = {
+        let barButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "star"),
+            style: .plain,
+            target: self,
+            action: #selector(handleStarTapped)
+        )
+        barButtonItem.tintColor = .purple
+        return barButtonItem
     }()
     
     private lazy var collectionViewLayout: UICollectionViewFlowLayout = {
@@ -64,6 +74,7 @@ final class DisneyCharactersViewController: UIViewController {
     }()
     
     private var searchTimer: Timer?
+    private var favoritesView: Bool = false
     
     private let viewModel: DisneyCharactersViewModel
     
@@ -117,11 +128,18 @@ extension DisneyCharactersViewController {
     }
     
     private func setupNavigationBar() {
+        navigationItem.rightBarButtonItem = starBarButtonItem
         navigationItem.titleView = searchBar
     }
     
     @objc override func dismissKeyboard() {
         searchBar.endEditing(true)
+    }
+    
+    @objc private func handleStarTapped() {
+        // TODO: change to favorites view
+        favoritesView.toggle()
+        starBarButtonItem.image = UIImage(systemName: favoritesView ? "star.fill" : "star")
     }
 }
 
@@ -183,10 +201,6 @@ extension DisneyCharactersViewController: UISearchBarDelegate {
     }
     
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
-        navigationItem.rightBarButtonItem = nil
-        searchBar.setShowsCancelButton(true, animated: true)
-        navigationController?.navigationBar.layoutIfNeeded()
-        
         UIView.animate(withDuration: 0.3) {
             self.collectionView.alpha = 0.3
             self.collectionView.transform = CGAffineTransform.identity.scaledBy(x: 0.99, y: 0.99)
@@ -196,9 +210,6 @@ extension DisneyCharactersViewController: UISearchBarDelegate {
     }
     
     func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
-//        navigationItem.rightBarButtonItem = TODO
-        searchBar.setShowsCancelButton(false, animated: true)
-        
         UIView.animate(withDuration: 0.3) {
             self.collectionView.alpha = 1
             self.collectionView.transform = .identity
