@@ -74,7 +74,8 @@
 		0C8352372D224139005384A9 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352362D224139005384A9 /* TabBarController.swift */; };
 		0C83523E2D224386005384A9 /* TabBarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83523D2D224386005384A9 /* TabBarPage.swift */; };
 		0C8352412D2246BB005384A9 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352402D2246BB005384A9 /* SearchBarView.swift */; };
-		0C8352432D2247C7005384A9 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352422D2247C7005384A9 /* UIViewController+.swift */; };
+		0C8352432D2247C7005384A9 /* UIViewController+DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352422D2247C7005384A9 /* UIViewController+DismissKeyboard.swift */; };
+		0C8352532D22EAEC005384A9 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352522D22EAEC005384A9 /* CustomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,7 +167,8 @@
 		0C8352362D224139005384A9 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		0C83523D2D224386005384A9 /* TabBarPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPage.swift; sourceTree = "<group>"; };
 		0C8352402D2246BB005384A9 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
-		0C8352422D2247C7005384A9 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		0C8352422D2247C7005384A9 /* UIViewController+DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+DismissKeyboard.swift"; sourceTree = "<group>"; };
+		0C8352522D22EAEC005384A9 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,8 +274,8 @@
 		0C83514D2D20BEF0005384A9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0C83524C2D22EA02005384A9 /* DismissKeyboard */,
 				0C8352442D224DAB005384A9 /* Append */,
-				0C8352422D2247C7005384A9 /* UIViewController+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -436,6 +438,7 @@
 		0C8351C32D218FB1005384A9 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				0C8352502D22EACE005384A9 /* CustomClasses */,
 				0C8352212D22335B005384A9 /* UIComponents */,
 				0C8352322D224100005384A9 /* TabBar */,
 				0C8351702D20CD1A005384A9 /* Networking */,
@@ -713,6 +716,30 @@
 			path = Append;
 			sourceTree = "<group>";
 		};
+		0C83524C2D22EA02005384A9 /* DismissKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				0C8352422D2247C7005384A9 /* UIViewController+DismissKeyboard.swift */,
+			);
+			path = DismissKeyboard;
+			sourceTree = "<group>";
+		};
+		0C8352502D22EACE005384A9 /* CustomClasses */ = {
+			isa = PBXGroup;
+			children = (
+				0C8352512D22EAD3005384A9 /* CustomViewController */,
+			);
+			path = CustomClasses;
+			sourceTree = "<group>";
+		};
+		0C8352512D22EAD3005384A9 /* CustomViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0C8352522D22EAEC005384A9 /* CustomViewController.swift */,
+			);
+			path = CustomViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -863,7 +890,7 @@
 				0C8351512D20C0A9005384A9 /* DisneyCharactersViewController.swift in Sources */,
 				0C8351902D20F62A005384A9 /* DisneyCharacter.swift in Sources */,
 				0C83520A2D2204C2005384A9 /* DisneyCharacterDetailsResponse+Mock.swift in Sources */,
-				0C8352432D2247C7005384A9 /* UIViewController+.swift in Sources */,
+				0C8352432D2247C7005384A9 /* UIViewController+DismissKeyboard.swift in Sources */,
 				0C83517A2D20CF5E005384A9 /* URLSession+HTTPClientProtocol.swift in Sources */,
 				0C8351942D20F6A0005384A9 /* DisneyCharactersPageResponse.swift in Sources */,
 				0C8351F12D21F979005384A9 /* DisneyCharacter+Mock.swift in Sources */,
@@ -878,6 +905,7 @@
 				0C83522A2D2238AF005384A9 /* UIView+Append.swift in Sources */,
 				0C8352042D2203F8005384A9 /* DisneyCharactersPageResponse+Mock.swift in Sources */,
 				0C8352062D220437005384A9 /* DisneyCharactersPageInfoResponse+Mock.swift in Sources */,
+				0C8352532D22EAEC005384A9 /* CustomViewController.swift in Sources */,
 				0C8351BC2D210949005384A9 /* DecodeMapper.swift in Sources */,
 				0C8351F32D21FA0C005384A9 /* DisneyCharactersPage+Mock.swift in Sources */,
 				0C8352242D22337D005384A9 /* GlobalLayoutMetrics.swift in Sources */,

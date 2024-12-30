@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class DisneyCharactersViewController: UIViewController {
+final class DisneyCharactersViewController: CustomViewController {
     private lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.delegate = self
@@ -64,15 +64,6 @@ final class DisneyCharactersViewController: UIViewController {
         return collectionView
     }()
     
-    private lazy var loadingLabel: UILabel = {
-        let label = UILabel()
-        label.isHidden = true
-        label.layer.zPosition = 100
-        label.text = "Loading"
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
     private var searchTimer: Timer?
     private var favoritesView: Bool = false
     
@@ -97,18 +88,17 @@ final class DisneyCharactersViewController: UIViewController {
         setupDismissKeyboardWhenTappedOutside()
         
         Task {
-            loadingLabel.isHidden = false
+            showScreenLoading()
             await viewModel.fetchCharacters()
             collectionView.reloadData()
-            loadingLabel.isHidden = true
+            hideScreenLoading()
         }
     }
 }
 
 extension DisneyCharactersViewController {
     private func setupInterface() {
-        view.addSubview(collectionView)
-        view.addSubview(loadingLabel)
+        view.appendSubview(collectionView)
     }
     
     private func setupConstraints() {
@@ -116,10 +106,7 @@ extension DisneyCharactersViewController {
             collectionView.topAnchor.constraint(equalTo: view.topAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            
-            loadingLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            loadingLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
     }
     
@@ -189,13 +176,13 @@ extension DisneyCharactersViewController: UISearchBarDelegate {
             guard let self else { return }
             
             Task { @MainActor in
-                self.loadingLabel.isHidden = false
+                self.showScreenLoading()
                 
                 await self.viewModel.fetchCharacters(with: searchText)
                 self.searchBar.text = searchText
                 self.collectionView.reloadData()
                 
-                self.loadingLabel.isHidden = true
+                self.hideScreenLoading()
             }
         }
     }
