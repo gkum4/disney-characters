@@ -120,6 +120,7 @@ extension DisneyCharactersViewController {
     }
     
     private func setupNavigationBar() {
+        title = "Personagens"
         navigationItem.rightBarButtonItem = starBarButtonItem
         navigationItem.titleView = searchBar
     }
@@ -156,7 +157,7 @@ extension DisneyCharactersViewController: UICollectionViewDelegate, UICollection
             return .init()
         }
         
-        cell.fill(with: viewModel.characters[indexPath.row])
+        cell.fill(with: viewModel.characters[indexPath.item])
         return cell
     }
     
@@ -171,6 +172,17 @@ extension DisneyCharactersViewController: UICollectionViewDelegate, UICollection
             await viewModel.fetchNextPage()
             collectionView.reloadData()
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let character = viewModel.characters[indexPath.item]
+        coordinator?.goToDisneyCharacterDetails(with: character)
+    }
+}
+
+extension DisneyCharactersViewController: DisneyCharactersViewModelDelegate {
+    func fetchCharactersFailed(with error: DisneyCharactersError) {
+        // TODO: handle errors
     }
 }
 
@@ -229,9 +241,13 @@ extension DisneyCharactersViewController {
     static func create(
         coordinator: DisneyCharactersCoordinatorProtocol
     ) -> DisneyCharactersViewController {
-        return DisneyCharactersViewController(
-            viewModel: DisneyCharactersViewModel(),
+        let viewModel = DisneyCharactersViewModel()
+        let vc = DisneyCharactersViewController(
+            viewModel: viewModel,
             coordinator: coordinator
         )
+        viewModel.delegate = vc
+        
+        return vc
     }
 }

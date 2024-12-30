@@ -8,6 +8,17 @@
 import UIKit
 
 class TabBarController: UITabBarController {
+    private weak var coordinator: TabBarCoordinatorProtocol?
+    
+    private init(coordinator: TabBarCoordinatorProtocol) {
+        self.coordinator = coordinator
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,5 +40,11 @@ class TabBarController: UITabBarController {
         
         tabBar.standardAppearance = appearance
         tabBar.scrollEdgeAppearance = appearance
+    }
+}
+
+extension TabBarController {
+    static func create(coordinator: TabBarCoordinatorProtocol) -> TabBarController {
+        return TabBarController(coordinator: coordinator)
     }
 }

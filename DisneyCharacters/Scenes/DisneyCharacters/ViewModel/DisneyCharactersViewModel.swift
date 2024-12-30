@@ -75,12 +75,6 @@ extension DisneyCharactersViewModel {
         
         await fetchCharacters()
     }
-    
-    func clearKeywordAndFetchCharacters() async {
-        clearVariables()
-        
-        await fetchCharacters()
-    }
 }
 
 extension DisneyCharactersViewModel {

@@ -15,19 +15,24 @@ class DisneyCharactersCoordinator: CoordinatorProtocol {
     var navigationController: UINavigationController
     var childCoordinators: [CoordinatorProtocol] = []
     weak var parentCoordinator: CoordinatorProtocol?
-    lazy var disneyCharactersVC = DisneyCharactersViewController.create(coordinator: self)
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
     func start() {
+        let disneyCharactersVC = DisneyCharactersViewController.create(coordinator: self)
+        
         navigationController.show(disneyCharactersVC, sender: self)
     }
 }
 
 extension DisneyCharactersCoordinator: DisneyCharactersCoordinatorProtocol {
-    func goToDisneyCharacterDetails(with model: DisneyCharacter) {
-        // TODO
+    func goToDisneyCharacterDetails(with character: DisneyCharacter) {
+        let disneyCharacterDetailsCoordinator = DisneyCharacterDetailsCoordinator(
+            navigationController: navigationController
+        )
+        childCoordinators.append(disneyCharacterDetailsCoordinator)
+        disneyCharacterDetailsCoordinator.start(with: character)
     }
 }

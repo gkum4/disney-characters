@@ -75,7 +75,7 @@ extension TestDisneyCharactersViewModel {
         fetchCharactersPageService.result = .success(mockModel)
         
         // When
-        let result = sut.canFetchNextPage()
+        let result = sut.canFetchNextPage(currentItem: 2)
         
         // Then
         XCTAssertFalse(result)

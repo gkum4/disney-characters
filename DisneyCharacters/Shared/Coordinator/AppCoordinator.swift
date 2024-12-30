@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AppCoordinator: CoordinatorProtocol {
+final class AppCoordinator: CoordinatorProtocol {
     var navigationController: UINavigationController
     var childCoordinators: [CoordinatorProtocol] = []
     weak var parentCoordinator: CoordinatorProtocol?

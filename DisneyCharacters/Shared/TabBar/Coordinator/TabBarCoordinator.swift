@@ -7,16 +7,17 @@
 
 import UIKit
 
+protocol TabBarCoordinatorProtocol: CoordinatorProtocol {}
+
 class TabBarCoordinator: CoordinatorProtocol {
     var navigationController: UINavigationController
     var childCoordinators: [CoordinatorProtocol] = []
     weak var parentCoordinator: CoordinatorProtocol?
     
-    let tabBarController: TabBarController
+    lazy var tabBarController = TabBarController.create(coordinator: self)
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
-        self.tabBarController = TabBarController()
     }
     
     func start() {
@@ -36,11 +37,13 @@ class TabBarCoordinator: CoordinatorProtocol {
                     image: UIImage(systemName: "person.2"),
                     tag: 0
                 )
+                
                 let disneyCharactersCoordinator = DisneyCharactersCoordinator(
                     navigationController: disneyCharactersNavController
                 )
                 childCoordinators.append(disneyCharactersCoordinator)
                 disneyCharactersCoordinator.start()
+                
                 return disneyCharactersNavController
                 
             case .myList:
@@ -58,3 +61,5 @@ class TabBarCoordinator: CoordinatorProtocol {
         }
     }
 }
+
+extension TabBarCoordinator: TabBarCoordinatorProtocol {}
