@@ -1,5 +1,5 @@
 //
-//  TestFetchDisneyCharacterService.swift
+//  TestRemoteFetchDisneyCharacterService.swift
 //  DisneyCharactersTests
 //
 //  Created by Gustavo Kumasawa on 29/12/24.
@@ -9,8 +9,8 @@ import Foundation
 import XCTest
 @testable import DisneyCharacters
 
-final class TestFetchDisneyCharacterService: XCTestCase {
-    var sut: FetchDisneyCharacterService!
+final class TestRemoteFetchDisneyCharacterService: XCTestCase {
+    var sut: RemoteFetchDisneyCharacterService!
     var client: StubHTTPClient!
     var fetchDisneyCharacterMapper: StubFetchDisneyCharacterMapper!
     var taskErrorMapper: StubServiceTaskErrorMapper!
@@ -19,7 +19,7 @@ final class TestFetchDisneyCharacterService: XCTestCase {
         client = StubHTTPClient()
         fetchDisneyCharacterMapper = StubFetchDisneyCharacterMapper()
         taskErrorMapper = StubServiceTaskErrorMapper()
-        sut = FetchDisneyCharacterService(
+        sut = RemoteFetchDisneyCharacterService(
             client: client,
             fetchDisneyCharacterMapper: fetchDisneyCharacterMapper,
             taskErrorMapper: taskErrorMapper
@@ -36,7 +36,7 @@ final class TestFetchDisneyCharacterService: XCTestCase {
     }
 }
 
-extension TestFetchDisneyCharacterService {
+extension TestRemoteFetchDisneyCharacterService {
     func test_fetch_whenSuccess_shouldReturnDisneyCharacter() async {
         // Given
         client.result = .success(.successMock())

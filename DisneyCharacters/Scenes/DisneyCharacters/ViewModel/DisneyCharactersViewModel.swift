@@ -27,7 +27,7 @@ class DisneyCharactersViewModel {
     
     init(
         pageSize: Int = 30,
-        fetchCharactersPageService: FetchDisneyCharactersPageServiceProtocol = FetchDisneyCharactersPageService()
+        fetchCharactersPageService: FetchDisneyCharactersPageServiceProtocol = RemoteFetchDisneyCharactersPageService()
     ) {
         self.pageSize = pageSize
         self.fetchCharactersPageService = fetchCharactersPageService

@@ -1,5 +1,5 @@
 //
-//  FetchDisneyCharacterService.swift
+//  RemoteFetchDisneyCharacterService.swift
 //  DisneyCharacters
 //
 //  Created by Gustavo Kumasawa on 29/12/24.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class FetchDisneyCharacterService: FetchDisneyCharacterServiceProtocol {
+final class RemoteFetchDisneyCharacterService: FetchDisneyCharacterServiceProtocol {
     private let client: HTTPClientProtocol
     private let fetchDisneyCharacterMapper: any HTTPTaskResultMapperProtocol<DisneyCharacter>
     private let taskErrorMapper: any HTTPTaskErrorMapperProtocol<ServiceError>

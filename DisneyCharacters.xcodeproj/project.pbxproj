@@ -28,7 +28,7 @@
 		0C8351922D20F64F005384A9 /* DisneyCharactersPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8351912D20F64F005384A9 /* DisneyCharactersPage.swift */; };
 		0C8351942D20F6A0005384A9 /* DisneyCharactersPageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8351932D20F6A0005384A9 /* DisneyCharactersPageResponse.swift */; };
 		0C8351962D20F6B8005384A9 /* DisneyCharactersPageInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8351952D20F6B8005384A9 /* DisneyCharactersPageInfoResponse.swift */; };
-		0C83519B2D20F7FE005384A9 /* FetchDisneyCharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83519A2D20F7FE005384A9 /* FetchDisneyCharacterService.swift */; };
+		0C83519B2D20F7FE005384A9 /* RemoteFetchDisneyCharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83519A2D20F7FE005384A9 /* RemoteFetchDisneyCharacterService.swift */; };
 		0C83519D2D20F8FF005384A9 /* HTTPRequestBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83519C2D20F8FF005384A9 /* HTTPRequestBuilderProtocol.swift */; };
 		0C8351A02D20FA32005384A9 /* FetchDisneyCharactersPageRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83519F2D20FA32005384A9 /* FetchDisneyCharactersPageRequestBuilder.swift */; };
 		0C8351A32D20FC5A005384A9 /* FetchDisneyCharacterRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8351A22D20FC5A005384A9 /* FetchDisneyCharacterRequestBuilder.swift */; };
@@ -42,11 +42,11 @@
 		0C8351CE2D21F288005384A9 /* HTTPTaskErrorMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8351CD2D21F288005384A9 /* HTTPTaskErrorMapperProtocol.swift */; };
 		0C8351D02D21F2E5005384A9 /* ServiceTaskErrorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8351CF2D21F2E5005384A9 /* ServiceTaskErrorMapper.swift */; };
 		0C8351D62D21F4D1005384A9 /* StubHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8351D52D21F4D1005384A9 /* StubHTTPClient.swift */; };
-		0C8351DD2D21F559005384A9 /* FetchDisneyCharactersPageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8351DC2D21F559005384A9 /* FetchDisneyCharactersPageService.swift */; };
+		0C8351DD2D21F559005384A9 /* RemoteFetchDisneyCharactersPageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8351DC2D21F559005384A9 /* RemoteFetchDisneyCharactersPageService.swift */; };
 		0C8351DF2D21F577005384A9 /* FetchDisneyCharactersPageServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8351DE2D21F577005384A9 /* FetchDisneyCharactersPageServiceProtocol.swift */; };
 		0C8351E82D21F6B1005384A9 /* StubFetchDisneyCharactersPageMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8351E72D21F6B1005384A9 /* StubFetchDisneyCharactersPageMapper.swift */; };
 		0C8351EC2D21F74A005384A9 /* StubServiceTaskErrorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8351EB2D21F74A005384A9 /* StubServiceTaskErrorMapper.swift */; };
-		0C8351EF2D21F7B7005384A9 /* TestFetchDisneyCharactersPageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8351EE2D21F7B7005384A9 /* TestFetchDisneyCharactersPageService.swift */; };
+		0C8351EF2D21F7B7005384A9 /* TestRemoteFetchDisneyCharactersPageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8351EE2D21F7B7005384A9 /* TestRemoteFetchDisneyCharactersPageService.swift */; };
 		0C8351F12D21F979005384A9 /* DisneyCharacter+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8351F02D21F979005384A9 /* DisneyCharacter+Mock.swift */; };
 		0C8351F32D21FA0C005384A9 /* DisneyCharactersPage+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8351F22D21FA0C005384A9 /* DisneyCharactersPage+Mock.swift */; };
 		0C8351F72D21FB71005384A9 /* HTTPTaskResult+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8351F62D21FB71005384A9 /* HTTPTaskResult+Mock.swift */; };
@@ -58,7 +58,7 @@
 		0C8352062D220437005384A9 /* DisneyCharactersPageInfoResponse+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352052D220437005384A9 /* DisneyCharactersPageInfoResponse+Mock.swift */; };
 		0C8352082D220460005384A9 /* DisneyCharacterResponse+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352072D220460005384A9 /* DisneyCharacterResponse+Mock.swift */; };
 		0C83520A2D2204C2005384A9 /* DisneyCharacterDetailsResponse+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352092D2204C2005384A9 /* DisneyCharacterDetailsResponse+Mock.swift */; };
-		0C83520D2D2206CB005384A9 /* TestFetchDisneyCharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83520C2D2206CB005384A9 /* TestFetchDisneyCharacterService.swift */; };
+		0C83520D2D2206CB005384A9 /* TestRemoteFetchDisneyCharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83520C2D2206CB005384A9 /* TestRemoteFetchDisneyCharacterService.swift */; };
 		0C8352102D220701005384A9 /* StubFetchDisneyCharacterMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83520F2D220701005384A9 /* StubFetchDisneyCharacterMapper.swift */; };
 		0C8352122D220815005384A9 /* TestFetchDisneyCharacterMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352112D220815005384A9 /* TestFetchDisneyCharacterMapper.swift */; };
 		0C8352142D2208DD005384A9 /* TestFetchDisneyCharacterRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352132D2208DD005384A9 /* TestFetchDisneyCharacterRequestBuilder.swift */; };
@@ -87,6 +87,24 @@
 		0C8352752D234197005384A9 /* DisneyCharacterDetailsMediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352742D234197005384A9 /* DisneyCharacterDetailsMediaType.swift */; };
 		0C8352772D2346B9005384A9 /* DisneyCharacterDetailsMediaMenuLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352762D2346B9005384A9 /* DisneyCharacterDetailsMediaMenuLabelView.swift */; };
 		0C8352792D2349D5005384A9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352782D2349D5005384A9 /* Colors.swift */; };
+		0C83527F2D2364EB005384A9 /* CDFetchFavoritedDisneyCharactersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83527E2D2364EB005384A9 /* CDFetchFavoritedDisneyCharactersService.swift */; };
+		0C8352832D236508005384A9 /* FetchFavoritedDisneyCharactersServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352822D236508005384A9 /* FetchFavoritedDisneyCharactersServiceProtocol.swift */; };
+		0C83528A2D2367D2005384A9 /* CDPersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352892D2367D2005384A9 /* CDPersistenceController.swift */; };
+		0C83528D2D236849005384A9 /* DisneyCharacters.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C83528B2D236849005384A9 /* DisneyCharacters.xcdatamodeld */; };
+		0C8352942D236A51005384A9 /* CDFavoritedDisneyCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352922D236A51005384A9 /* CDFavoritedDisneyCharacter.swift */; };
+		0C83529D2D236DE1005384A9 /* CDFetchFavoritedDisneyCharacterMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83529C2D236DE1005384A9 /* CDFetchFavoritedDisneyCharacterMapper.swift */; };
+		0C8352AF2D2379DF005384A9 /* FavoritedDisneyCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352AE2D2379DF005384A9 /* FavoritedDisneyCharacter.swift */; };
+		0C8352B12D237A4A005384A9 /* CDModelMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352B02D237A4A005384A9 /* CDModelMapperProtocol.swift */; };
+		0C8352B42D237AF6005384A9 /* CDSaveFavoritedDisneyCharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352B32D237AF6005384A9 /* CDSaveFavoritedDisneyCharacterService.swift */; };
+		0C8352B72D237B10005384A9 /* SaveFavoritedDisneyCharacterServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352B62D237B10005384A9 /* SaveFavoritedDisneyCharacterServiceProtocol.swift */; };
+		0C8352BA2D237CB5005384A9 /* TestCDFetchFavoritedDisneyCharactersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352B92D237CB5005384A9 /* TestCDFetchFavoritedDisneyCharactersService.swift */; };
+		0C8352BD2D237D8B005384A9 /* StubCDFetchFavoritedDisneyCharacterMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352BC2D237D8B005384A9 /* StubCDFetchFavoritedDisneyCharacterMapper.swift */; };
+		0C8352C02D237E43005384A9 /* CDFavoritedDisneyCharacter+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352BF2D237E43005384A9 /* CDFavoritedDisneyCharacter+Mock.swift */; };
+		0C8352C32D237F60005384A9 /* TestCDSaveFavoritedDisneyCharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352C22D237F60005384A9 /* TestCDSaveFavoritedDisneyCharacterService.swift */; };
+		0C8352C52D237FDA005384A9 /* FavoritedDisneyCharacter+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352C42D237FDA005384A9 /* FavoritedDisneyCharacter+Mock.swift */; };
+		0C8352C92D2380D9005384A9 /* DeleteFavoritedDisneyCharacterServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352C82D2380D9005384A9 /* DeleteFavoritedDisneyCharacterServiceProtocol.swift */; };
+		0C8352CB2D238102005384A9 /* CDDeleteFavoritedDisneyCharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352CA2D238102005384A9 /* CDDeleteFavoritedDisneyCharacterService.swift */; };
+		0C8352CE2D2381F4005384A9 /* TestCDDeleteFavoritedDisneyCharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352CD2D2381F4005384A9 /* TestCDDeleteFavoritedDisneyCharacterService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,7 +150,7 @@
 		0C8351912D20F64F005384A9 /* DisneyCharactersPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharactersPage.swift; sourceTree = "<group>"; };
 		0C8351932D20F6A0005384A9 /* DisneyCharactersPageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharactersPageResponse.swift; sourceTree = "<group>"; };
 		0C8351952D20F6B8005384A9 /* DisneyCharactersPageInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharactersPageInfoResponse.swift; sourceTree = "<group>"; };
-		0C83519A2D20F7FE005384A9 /* FetchDisneyCharacterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDisneyCharacterService.swift; sourceTree = "<group>"; };
+		0C83519A2D20F7FE005384A9 /* RemoteFetchDisneyCharacterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFetchDisneyCharacterService.swift; sourceTree = "<group>"; };
 		0C83519C2D20F8FF005384A9 /* HTTPRequestBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestBuilderProtocol.swift; sourceTree = "<group>"; };
 		0C83519F2D20FA32005384A9 /* FetchDisneyCharactersPageRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDisneyCharactersPageRequestBuilder.swift; sourceTree = "<group>"; };
 		0C8351A22D20FC5A005384A9 /* FetchDisneyCharacterRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDisneyCharacterRequestBuilder.swift; sourceTree = "<group>"; };
@@ -146,11 +164,11 @@
 		0C8351CD2D21F288005384A9 /* HTTPTaskErrorMapperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTaskErrorMapperProtocol.swift; sourceTree = "<group>"; };
 		0C8351CF2D21F2E5005384A9 /* ServiceTaskErrorMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTaskErrorMapper.swift; sourceTree = "<group>"; };
 		0C8351D52D21F4D1005384A9 /* StubHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubHTTPClient.swift; sourceTree = "<group>"; };
-		0C8351DC2D21F559005384A9 /* FetchDisneyCharactersPageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDisneyCharactersPageService.swift; sourceTree = "<group>"; };
+		0C8351DC2D21F559005384A9 /* RemoteFetchDisneyCharactersPageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFetchDisneyCharactersPageService.swift; sourceTree = "<group>"; };
 		0C8351DE2D21F577005384A9 /* FetchDisneyCharactersPageServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDisneyCharactersPageServiceProtocol.swift; sourceTree = "<group>"; };
 		0C8351E72D21F6B1005384A9 /* StubFetchDisneyCharactersPageMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubFetchDisneyCharactersPageMapper.swift; sourceTree = "<group>"; };
 		0C8351EB2D21F74A005384A9 /* StubServiceTaskErrorMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubServiceTaskErrorMapper.swift; sourceTree = "<group>"; };
-		0C8351EE2D21F7B7005384A9 /* TestFetchDisneyCharactersPageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFetchDisneyCharactersPageService.swift; sourceTree = "<group>"; };
+		0C8351EE2D21F7B7005384A9 /* TestRemoteFetchDisneyCharactersPageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRemoteFetchDisneyCharactersPageService.swift; sourceTree = "<group>"; };
 		0C8351F02D21F979005384A9 /* DisneyCharacter+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DisneyCharacter+Mock.swift"; sourceTree = "<group>"; };
 		0C8351F22D21FA0C005384A9 /* DisneyCharactersPage+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DisneyCharactersPage+Mock.swift"; sourceTree = "<group>"; };
 		0C8351F62D21FB71005384A9 /* HTTPTaskResult+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPTaskResult+Mock.swift"; sourceTree = "<group>"; };
@@ -163,7 +181,7 @@
 		0C8352052D220437005384A9 /* DisneyCharactersPageInfoResponse+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DisneyCharactersPageInfoResponse+Mock.swift"; sourceTree = "<group>"; };
 		0C8352072D220460005384A9 /* DisneyCharacterResponse+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DisneyCharacterResponse+Mock.swift"; sourceTree = "<group>"; };
 		0C8352092D2204C2005384A9 /* DisneyCharacterDetailsResponse+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DisneyCharacterDetailsResponse+Mock.swift"; sourceTree = "<group>"; };
-		0C83520C2D2206CB005384A9 /* TestFetchDisneyCharacterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFetchDisneyCharacterService.swift; sourceTree = "<group>"; };
+		0C83520C2D2206CB005384A9 /* TestRemoteFetchDisneyCharacterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRemoteFetchDisneyCharacterService.swift; sourceTree = "<group>"; };
 		0C83520F2D220701005384A9 /* StubFetchDisneyCharacterMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubFetchDisneyCharacterMapper.swift; sourceTree = "<group>"; };
 		0C8352112D220815005384A9 /* TestFetchDisneyCharacterMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFetchDisneyCharacterMapper.swift; sourceTree = "<group>"; };
 		0C8352132D2208DD005384A9 /* TestFetchDisneyCharacterRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFetchDisneyCharacterRequestBuilder.swift; sourceTree = "<group>"; };
@@ -191,6 +209,24 @@
 		0C8352742D234197005384A9 /* DisneyCharacterDetailsMediaType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharacterDetailsMediaType.swift; sourceTree = "<group>"; };
 		0C8352762D2346B9005384A9 /* DisneyCharacterDetailsMediaMenuLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharacterDetailsMediaMenuLabelView.swift; sourceTree = "<group>"; };
 		0C8352782D2349D5005384A9 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		0C83527E2D2364EB005384A9 /* CDFetchFavoritedDisneyCharactersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDFetchFavoritedDisneyCharactersService.swift; sourceTree = "<group>"; };
+		0C8352822D236508005384A9 /* FetchFavoritedDisneyCharactersServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchFavoritedDisneyCharactersServiceProtocol.swift; sourceTree = "<group>"; };
+		0C8352892D2367D2005384A9 /* CDPersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDPersistenceController.swift; sourceTree = "<group>"; };
+		0C83528C2D236849005384A9 /* DisneyCharacters.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DisneyCharacters.xcdatamodel; sourceTree = "<group>"; };
+		0C8352922D236A51005384A9 /* CDFavoritedDisneyCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDFavoritedDisneyCharacter.swift; sourceTree = "<group>"; };
+		0C83529C2D236DE1005384A9 /* CDFetchFavoritedDisneyCharacterMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDFetchFavoritedDisneyCharacterMapper.swift; sourceTree = "<group>"; };
+		0C8352AE2D2379DF005384A9 /* FavoritedDisneyCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritedDisneyCharacter.swift; sourceTree = "<group>"; };
+		0C8352B02D237A4A005384A9 /* CDModelMapperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDModelMapperProtocol.swift; sourceTree = "<group>"; };
+		0C8352B32D237AF6005384A9 /* CDSaveFavoritedDisneyCharacterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDSaveFavoritedDisneyCharacterService.swift; sourceTree = "<group>"; };
+		0C8352B62D237B10005384A9 /* SaveFavoritedDisneyCharacterServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFavoritedDisneyCharacterServiceProtocol.swift; sourceTree = "<group>"; };
+		0C8352B92D237CB5005384A9 /* TestCDFetchFavoritedDisneyCharactersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCDFetchFavoritedDisneyCharactersService.swift; sourceTree = "<group>"; };
+		0C8352BC2D237D8B005384A9 /* StubCDFetchFavoritedDisneyCharacterMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubCDFetchFavoritedDisneyCharacterMapper.swift; sourceTree = "<group>"; };
+		0C8352BF2D237E43005384A9 /* CDFavoritedDisneyCharacter+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDFavoritedDisneyCharacter+Mock.swift"; sourceTree = "<group>"; };
+		0C8352C22D237F60005384A9 /* TestCDSaveFavoritedDisneyCharacterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCDSaveFavoritedDisneyCharacterService.swift; sourceTree = "<group>"; };
+		0C8352C42D237FDA005384A9 /* FavoritedDisneyCharacter+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoritedDisneyCharacter+Mock.swift"; sourceTree = "<group>"; };
+		0C8352C82D2380D9005384A9 /* DeleteFavoritedDisneyCharacterServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFavoritedDisneyCharacterServiceProtocol.swift; sourceTree = "<group>"; };
+		0C8352CA2D238102005384A9 /* CDDeleteFavoritedDisneyCharacterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDDeleteFavoritedDisneyCharacterService.swift; sourceTree = "<group>"; };
+		0C8352CD2D2381F4005384A9 /* TestCDDeleteFavoritedDisneyCharacterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCDDeleteFavoritedDisneyCharacterService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,7 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				0C8351C32D218FB1005384A9 /* Shared */,
-				0C8351882D20F3BA005384A9 /* DataModels */,
+				0C8351882D20F3BA005384A9 /* Models */,
 				0C83514A2D20BECF005384A9 /* Scenes */,
 				0C8351672D20C8D3005384A9 /* Services */,
 				0C83514C2D20BEE2005384A9 /* Utilities */,
@@ -350,8 +386,9 @@
 		0C8351652D20C4C9005384A9 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				0C8352022D2203E6005384A9 /* Responses */,
-				0C8352012D2203E0005384A9 /* Models */,
+				0C8351F02D21F979005384A9 /* DisneyCharacter+Mock.swift */,
+				0C8351F22D21FA0C005384A9 /* DisneyCharactersPage+Mock.swift */,
+				0C8352C42D237FDA005384A9 /* FavoritedDisneyCharacter+Mock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -359,6 +396,9 @@
 		0C8351672D20C8D3005384A9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0C8352C62D2380C2005384A9 /* DeleteFavoritedDisneyCharacterService */,
+				0C8352B22D237AE1005384A9 /* SaveFavoritedDisneyCharacterService */,
+				0C83527D2D2364C9005384A9 /* FetchFavoritedDisneyCharactersService */,
 				0C8351D82D21F53E005384A9 /* FetchDisneyCharactersPageService */,
 				0C8351E22D21F5CE005384A9 /* FetchDisneyCharacterService */,
 				0C8351E02D21F5B4005384A9 /* Shared */,
@@ -419,32 +459,15 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
-		0C8351882D20F3BA005384A9 /* DataModels */ = {
+		0C8351882D20F3BA005384A9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0C8352982D236A88005384A9 /* CoreData */,
+				0C8352972D236A82005384A9 /* Responses */,
 				0C8351652D20C4C9005384A9 /* Mocks */,
-				0C83518E2D20F60B005384A9 /* Models */,
-				0C83518D2D20F605005384A9 /* Responses */,
-			);
-			path = DataModels;
-			sourceTree = "<group>";
-		};
-		0C83518D2D20F605005384A9 /* Responses */ = {
-			isa = PBXGroup;
-			children = (
-				0C8351932D20F6A0005384A9 /* DisneyCharactersPageResponse.swift */,
-				0C8351892D20F3C2005384A9 /* DisneyCharacterResponse.swift */,
-				0C8351952D20F6B8005384A9 /* DisneyCharactersPageInfoResponse.swift */,
-				0C8351B02D2100ED005384A9 /* DisneyCharacterDetailsResponse.swift */,
-			);
-			path = Responses;
-			sourceTree = "<group>";
-		};
-		0C83518E2D20F60B005384A9 /* Models */ = {
-			isa = PBXGroup;
-			children = (
 				0C83518F2D20F62A005384A9 /* DisneyCharacter.swift */,
 				0C8351912D20F64F005384A9 /* DisneyCharactersPage.swift */,
+				0C8352AE2D2379DF005384A9 /* FavoritedDisneyCharacter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -454,6 +477,7 @@
 			children = (
 				0C8351C72D219279005384A9 /* HTTPTaskResultMapperProtocol.swift */,
 				0C8351CD2D21F288005384A9 /* HTTPTaskErrorMapperProtocol.swift */,
+				0C8352B02D237A4A005384A9 /* CDModelMapperProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -461,6 +485,7 @@
 		0C8351C32D218FB1005384A9 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				0C8352842D23669C005384A9 /* CoreData */,
 				0C8352552D22F368005384A9 /* Coordinator */,
 				0C8352512D22EAD3005384A9 /* CustomViewController */,
 				0C8352212D22335B005384A9 /* UIComponents */,
@@ -495,7 +520,7 @@
 				0C8351DB2D21F54F005384A9 /* Protocols */,
 				0C8351DA2D21F54A005384A9 /* RequestBuilders */,
 				0C8351D92D21F547005384A9 /* Mappers */,
-				0C8351DC2D21F559005384A9 /* FetchDisneyCharactersPageService.swift */,
+				0C8351DC2D21F559005384A9 /* RemoteFetchDisneyCharactersPageService.swift */,
 			);
 			path = FetchDisneyCharactersPageService;
 			sourceTree = "<group>";
@@ -550,7 +575,7 @@
 				0C8351E32D21F5DB005384A9 /* Mappers */,
 				0C8351E42D21F5E0005384A9 /* RequestBuilders */,
 				0C8351E52D21F5E8005384A9 /* Protocols */,
-				0C83519A2D20F7FE005384A9 /* FetchDisneyCharacterService.swift */,
+				0C83519A2D20F7FE005384A9 /* RemoteFetchDisneyCharacterService.swift */,
 			);
 			path = FetchDisneyCharacterService;
 			sourceTree = "<group>";
@@ -591,6 +616,7 @@
 		0C8351EA2D21F70E005384A9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0C8352BB2D237D6E005384A9 /* FetchFavoritedDisneyCharactersService */,
 				0C83520E2D2206F2005384A9 /* FetchDisneyCharacterService */,
 				0C8351E62D21F67F005384A9 /* FetchDisneyCharacterPageService */,
 				0C8351EB2D21F74A005384A9 /* StubServiceTaskErrorMapper.swift */,
@@ -603,6 +629,9 @@
 		0C8351ED2D21F79E005384A9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0C8352CC2D2381DF005384A9 /* DeleteFavoritedDisneyCharacterService */,
+				0C8352C12D237F4A005384A9 /* SaveFavoritedDisneyCharacterService */,
+				0C8352B82D237CA3005384A9 /* FetchFavoritedDisneyCharactersService */,
 				0C83520B2D2206AA005384A9 /* FetchDisneyCharacterService */,
 				0C8351F52D21FB3D005384A9 /* FetchDisneyCharactersPageService */,
 			);
@@ -612,37 +641,17 @@
 		0C8351F52D21FB3D005384A9 /* FetchDisneyCharactersPageService */ = {
 			isa = PBXGroup;
 			children = (
-				0C8351EE2D21F7B7005384A9 /* TestFetchDisneyCharactersPageService.swift */,
+				0C8351EE2D21F7B7005384A9 /* TestRemoteFetchDisneyCharactersPageService.swift */,
 				0C8351F92D220087005384A9 /* TestFetchDisneyCharactersPageRequestBuilder.swift */,
 				0C8351FB2D2201E5005384A9 /* TestFetchDisneyCharactersPageMapper.swift */,
 			);
 			path = FetchDisneyCharactersPageService;
 			sourceTree = "<group>";
 		};
-		0C8352012D2203E0005384A9 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				0C8351F02D21F979005384A9 /* DisneyCharacter+Mock.swift */,
-				0C8351F22D21FA0C005384A9 /* DisneyCharactersPage+Mock.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		0C8352022D2203E6005384A9 /* Responses */ = {
-			isa = PBXGroup;
-			children = (
-				0C8352032D2203F8005384A9 /* DisneyCharactersPageResponse+Mock.swift */,
-				0C8352052D220437005384A9 /* DisneyCharactersPageInfoResponse+Mock.swift */,
-				0C8352072D220460005384A9 /* DisneyCharacterResponse+Mock.swift */,
-				0C8352092D2204C2005384A9 /* DisneyCharacterDetailsResponse+Mock.swift */,
-			);
-			path = Responses;
-			sourceTree = "<group>";
-		};
 		0C83520B2D2206AA005384A9 /* FetchDisneyCharacterService */ = {
 			isa = PBXGroup;
 			children = (
-				0C83520C2D2206CB005384A9 /* TestFetchDisneyCharacterService.swift */,
+				0C83520C2D2206CB005384A9 /* TestRemoteFetchDisneyCharacterService.swift */,
 				0C8352132D2208DD005384A9 /* TestFetchDisneyCharacterRequestBuilder.swift */,
 				0C8352112D220815005384A9 /* TestFetchDisneyCharacterMapper.swift */,
 			);
@@ -837,6 +846,147 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		0C83527D2D2364C9005384A9 /* FetchFavoritedDisneyCharactersService */ = {
+			isa = PBXGroup;
+			children = (
+				0C83529B2D236DCE005384A9 /* Mappers */,
+				0C8352812D2364F3005384A9 /* Protocols */,
+				0C83527E2D2364EB005384A9 /* CDFetchFavoritedDisneyCharactersService.swift */,
+			);
+			path = FetchFavoritedDisneyCharactersService;
+			sourceTree = "<group>";
+		};
+		0C8352812D2364F3005384A9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0C8352822D236508005384A9 /* FetchFavoritedDisneyCharactersServiceProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		0C8352842D23669C005384A9 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				0C8352892D2367D2005384A9 /* CDPersistenceController.swift */,
+				0C83528B2D236849005384A9 /* DisneyCharacters.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		0C8352972D236A82005384A9 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				0C8352992D236A8F005384A9 /* Mock */,
+				0C8351932D20F6A0005384A9 /* DisneyCharactersPageResponse.swift */,
+				0C8351892D20F3C2005384A9 /* DisneyCharacterResponse.swift */,
+				0C8351952D20F6B8005384A9 /* DisneyCharactersPageInfoResponse.swift */,
+				0C8351B02D2100ED005384A9 /* DisneyCharacterDetailsResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		0C8352982D236A88005384A9 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				0C8352BE2D237E37005384A9 /* Mocks */,
+				0C8352922D236A51005384A9 /* CDFavoritedDisneyCharacter.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		0C8352992D236A8F005384A9 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				0C8352032D2203F8005384A9 /* DisneyCharactersPageResponse+Mock.swift */,
+				0C8352052D220437005384A9 /* DisneyCharactersPageInfoResponse+Mock.swift */,
+				0C8352072D220460005384A9 /* DisneyCharacterResponse+Mock.swift */,
+				0C8352092D2204C2005384A9 /* DisneyCharacterDetailsResponse+Mock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		0C83529B2D236DCE005384A9 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				0C83529C2D236DE1005384A9 /* CDFetchFavoritedDisneyCharacterMapper.swift */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		0C8352B22D237AE1005384A9 /* SaveFavoritedDisneyCharacterService */ = {
+			isa = PBXGroup;
+			children = (
+				0C8352B52D237B04005384A9 /* Protocols */,
+				0C8352B32D237AF6005384A9 /* CDSaveFavoritedDisneyCharacterService.swift */,
+			);
+			path = SaveFavoritedDisneyCharacterService;
+			sourceTree = "<group>";
+		};
+		0C8352B52D237B04005384A9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0C8352B62D237B10005384A9 /* SaveFavoritedDisneyCharacterServiceProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		0C8352B82D237CA3005384A9 /* FetchFavoritedDisneyCharactersService */ = {
+			isa = PBXGroup;
+			children = (
+				0C8352B92D237CB5005384A9 /* TestCDFetchFavoritedDisneyCharactersService.swift */,
+			);
+			path = FetchFavoritedDisneyCharactersService;
+			sourceTree = "<group>";
+		};
+		0C8352BB2D237D6E005384A9 /* FetchFavoritedDisneyCharactersService */ = {
+			isa = PBXGroup;
+			children = (
+				0C8352BC2D237D8B005384A9 /* StubCDFetchFavoritedDisneyCharacterMapper.swift */,
+			);
+			path = FetchFavoritedDisneyCharactersService;
+			sourceTree = "<group>";
+		};
+		0C8352BE2D237E37005384A9 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				0C8352BF2D237E43005384A9 /* CDFavoritedDisneyCharacter+Mock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		0C8352C12D237F4A005384A9 /* SaveFavoritedDisneyCharacterService */ = {
+			isa = PBXGroup;
+			children = (
+				0C8352C22D237F60005384A9 /* TestCDSaveFavoritedDisneyCharacterService.swift */,
+			);
+			path = SaveFavoritedDisneyCharacterService;
+			sourceTree = "<group>";
+		};
+		0C8352C62D2380C2005384A9 /* DeleteFavoritedDisneyCharacterService */ = {
+			isa = PBXGroup;
+			children = (
+				0C8352C72D2380CF005384A9 /* Protocols */,
+				0C8352CA2D238102005384A9 /* CDDeleteFavoritedDisneyCharacterService.swift */,
+			);
+			path = DeleteFavoritedDisneyCharacterService;
+			sourceTree = "<group>";
+		};
+		0C8352C72D2380CF005384A9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0C8352C82D2380D9005384A9 /* DeleteFavoritedDisneyCharacterServiceProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		0C8352CC2D2381DF005384A9 /* DeleteFavoritedDisneyCharacterService */ = {
+			isa = PBXGroup;
+			children = (
+				0C8352CD2D2381F4005384A9 /* TestCDDeleteFavoritedDisneyCharacterService.swift */,
+			);
+			path = DeleteFavoritedDisneyCharacterService;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -985,15 +1135,18 @@
 				0C8351A02D20FA32005384A9 /* FetchDisneyCharactersPageRequestBuilder.swift in Sources */,
 				0C8352202D222FFA005384A9 /* DisneyCharacterCollectionViewCell.swift in Sources */,
 				0C83523E2D224386005384A9 /* TabBarPage.swift in Sources */,
+				0C8352C52D237FDA005384A9 /* FavoritedDisneyCharacter+Mock.swift in Sources */,
 				0C83519D2D20F8FF005384A9 /* HTTPRequestBuilderProtocol.swift in Sources */,
 				0C8351512D20C0A9005384A9 /* DisneyCharactersViewController.swift in Sources */,
 				0C8352772D2346B9005384A9 /* DisneyCharacterDetailsMediaMenuLabelView.swift in Sources */,
 				0C8352612D22FDAF005384A9 /* DisneyCharactersCoordinator.swift in Sources */,
 				0C8351902D20F62A005384A9 /* DisneyCharacter.swift in Sources */,
+				0C8352B12D237A4A005384A9 /* CDModelMapperProtocol.swift in Sources */,
 				0C83520A2D2204C2005384A9 /* DisneyCharacterDetailsResponse+Mock.swift in Sources */,
 				0C8352432D2247C7005384A9 /* UIViewController+DismissKeyboard.swift in Sources */,
 				0C83517A2D20CF5E005384A9 /* URLSession+HTTPClientProtocol.swift in Sources */,
 				0C8351942D20F6A0005384A9 /* DisneyCharactersPageResponse.swift in Sources */,
+				0C8352C02D237E43005384A9 /* CDFavoritedDisneyCharacter+Mock.swift in Sources */,
 				0C8352652D232960005384A9 /* DisneyCharacterDetailsView.swift in Sources */,
 				0C8351F12D21F979005384A9 /* DisneyCharacter+Mock.swift in Sources */,
 				0C8351D02D21F2E5005384A9 /* ServiceTaskErrorMapper.swift in Sources */,
@@ -1004,8 +1157,10 @@
 				0C8351CE2D21F288005384A9 /* HTTPTaskErrorMapperProtocol.swift in Sources */,
 				0C8351732D20CD98005384A9 /* HTTPClientProtocol.swift in Sources */,
 				0C8352262D2233B4005384A9 /* DisneyCharactersMetrics.swift in Sources */,
+				0C83528D2D236849005384A9 /* DisneyCharacters.xcdatamodeld in Sources */,
 				0C8352582D22F373005384A9 /* CoordinatorProtocol.swift in Sources */,
 				0C83522A2D2238AF005384A9 /* UIView+Append.swift in Sources */,
+				0C8352C92D2380D9005384A9 /* DeleteFavoritedDisneyCharacterServiceProtocol.swift in Sources */,
 				0C8352732D233CB2005384A9 /* DisneyCharacterDetailsMediaSectionView.swift in Sources */,
 				0C8352042D2203F8005384A9 /* DisneyCharactersPageResponse+Mock.swift in Sources */,
 				0C8352062D220437005384A9 /* DisneyCharactersPageInfoResponse+Mock.swift in Sources */,
@@ -1018,16 +1173,25 @@
 				0C8352372D224139005384A9 /* TabBarController.swift in Sources */,
 				0C8351DF2D21F577005384A9 /* FetchDisneyCharactersPageServiceProtocol.swift in Sources */,
 				0C8351B12D2100ED005384A9 /* DisneyCharacterDetailsResponse.swift in Sources */,
+				0C8352832D236508005384A9 /* FetchFavoritedDisneyCharactersServiceProtocol.swift in Sources */,
+				0C8352AF2D2379DF005384A9 /* FavoritedDisneyCharacter.swift in Sources */,
+				0C8352B42D237AF6005384A9 /* CDSaveFavoritedDisneyCharacterService.swift in Sources */,
 				0C83517F2D20E075005384A9 /* HTTPTaskError.swift in Sources */,
+				0C8352B72D237B10005384A9 /* SaveFavoritedDisneyCharacterServiceProtocol.swift in Sources */,
 				0C73D58C2D20A557007BBECE /* AppDelegate.swift in Sources */,
 				0C8352682D23296D005384A9 /* DisneyCharacterDetailsViewModel.swift in Sources */,
-				0C8351DD2D21F559005384A9 /* FetchDisneyCharactersPageService.swift in Sources */,
+				0C8351DD2D21F559005384A9 /* RemoteFetchDisneyCharactersPageService.swift in Sources */,
 				0C8352792D2349D5005384A9 /* Colors.swift in Sources */,
 				0C83526B2D23297E005384A9 /* DisneyCharacterDetailsCoordinator.swift in Sources */,
+				0C8352942D236A51005384A9 /* CDFavoritedDisneyCharacter.swift in Sources */,
 				0C8351922D20F64F005384A9 /* DisneyCharactersPage.swift in Sources */,
+				0C83528A2D2367D2005384A9 /* CDPersistenceController.swift in Sources */,
+				0C83527F2D2364EB005384A9 /* CDFetchFavoritedDisneyCharactersService.swift in Sources */,
+				0C8352CB2D238102005384A9 /* CDDeleteFavoritedDisneyCharacterService.swift in Sources */,
 				0C73D58E2D20A557007BBECE /* SceneDelegate.swift in Sources */,
-				0C83519B2D20F7FE005384A9 /* FetchDisneyCharacterService.swift in Sources */,
+				0C83519B2D20F7FE005384A9 /* RemoteFetchDisneyCharacterService.swift in Sources */,
 				0C8351AA2D20FF4E005384A9 /* FetchDisneyCharactersPageMapper.swift in Sources */,
+				0C83529D2D236DE1005384A9 /* CDFetchFavoritedDisneyCharacterMapper.swift in Sources */,
 				0C8351C62D218FCE005384A9 /* APIBaseURL.swift in Sources */,
 				0C8352082D220460005384A9 /* DisneyCharacterResponse+Mock.swift in Sources */,
 				0C8351CA2D21942B005384A9 /* StatusCodeMapper.swift in Sources */,
@@ -1039,21 +1203,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C8351642D20C48A005384A9 /* TestDisneyCharactersViewModel.swift in Sources */,
-				0C8351EF2D21F7B7005384A9 /* TestFetchDisneyCharactersPageService.swift in Sources */,
+				0C8351EF2D21F7B7005384A9 /* TestRemoteFetchDisneyCharactersPageService.swift in Sources */,
 				0C8352102D220701005384A9 /* StubFetchDisneyCharacterMapper.swift in Sources */,
 				0C8352142D2208DD005384A9 /* TestFetchDisneyCharacterRequestBuilder.swift in Sources */,
+				0C8352BA2D237CB5005384A9 /* TestCDFetchFavoritedDisneyCharactersService.swift in Sources */,
+				0C8352BD2D237D8B005384A9 /* StubCDFetchFavoritedDisneyCharacterMapper.swift in Sources */,
 				0C8352002D2202D4005384A9 /* StubStatusCodeMapper.swift in Sources */,
 				0C8351FC2D2201E5005384A9 /* TestFetchDisneyCharactersPageMapper.swift in Sources */,
 				0C8352122D220815005384A9 /* TestFetchDisneyCharacterMapper.swift in Sources */,
 				0C8352192D221513005384A9 /* StubFetchDisneyCharactersPageService.swift in Sources */,
 				0C83521D2D2217B7005384A9 /* SpyDisneyCharactersViewModelDelegate.swift in Sources */,
-				0C83520D2D2206CB005384A9 /* TestFetchDisneyCharacterService.swift in Sources */,
+				0C83520D2D2206CB005384A9 /* TestRemoteFetchDisneyCharacterService.swift in Sources */,
 				0C8351F72D21FB71005384A9 /* HTTPTaskResult+Mock.swift in Sources */,
 				0C8351FA2D220087005384A9 /* TestFetchDisneyCharactersPageRequestBuilder.swift in Sources */,
+				0C8352C32D237F60005384A9 /* TestCDSaveFavoritedDisneyCharacterService.swift in Sources */,
 				0C73D5A32D20A558007BBECE /* DisneyCharactersTests.swift in Sources */,
 				0C8351FE2D220289005384A9 /* StubDecodeMapper.swift in Sources */,
 				0C8351EC2D21F74A005384A9 /* StubServiceTaskErrorMapper.swift in Sources */,
 				0C8351E82D21F6B1005384A9 /* StubFetchDisneyCharactersPageMapper.swift in Sources */,
+				0C8352CE2D2381F4005384A9 /* TestCDDeleteFavoritedDisneyCharacterService.swift in Sources */,
 				0C8351D62D21F4D1005384A9 /* StubHTTPClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1406,6 +1574,20 @@
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		0C83528B2D236849005384A9 /* DisneyCharacters.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0C83528C2D236849005384A9 /* DisneyCharacters.xcdatamodel */,
+			);
+			currentVersion = 0C83528C2D236849005384A9 /* DisneyCharacters.xcdatamodel */;
+			name = DisneyCharacters.xcdatamodeld;
+			path = /Users/gustavokumasawa/dev/ios/DisneyCharacters/DisneyCharacters/Shared/CoreData/DisneyCharacters.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0C73D5802D20A557007BBECE /* Project object */;
 }
