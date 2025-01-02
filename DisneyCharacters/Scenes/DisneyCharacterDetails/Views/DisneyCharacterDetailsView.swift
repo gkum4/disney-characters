@@ -33,10 +33,12 @@ struct DisneyCharacterDetailsView: View {
     var body: some View {
         ScrollView(.vertical) {
             VStack {
-                KFImage(viewModel.character.imageUrl)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: DisneyCharacterDetailsMetrics.imageHeight)
+                if let imageUrl = viewModel.character.imageUrl {
+                    KFImage(imageUrl)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: DisneyCharacterDetailsMetrics.imageHeight)
+                }
                 
                 nameSectionView
                     .padding(.bottom, DisneyCharacterDetailsMetrics.padding)
@@ -53,25 +55,39 @@ struct DisneyCharacterDetailsView: View {
         .environmentObject(viewModel)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Button(action: viewModel.favoriteCharacter) {
-                    Image(systemName: "heart.fill")
+                Button {
+                    Task {
+                        switch viewModel.isFavorited {
+                        case true:
+                            await viewModel.unfavoriteCharacter()
+                        case false:
+                            await viewModel.favoriteCharacter()
+                        }
+                    }
+                } label: {
+                    Image(systemName: viewModel.isFavorited ? "heart.fill" : "heart")
                 }
                 .tint(.purple)
             }
+        }
+        .loaderOverlay(isLoading: viewModel.isLoading)
+        .toast($viewModel.toastMessage)
+        .task {
+            await viewModel.fetchCharacter()
         }
     }
 }
 
 extension DisneyCharacterDetailsView {
-    static func create(character: DisneyCharacter) -> Self {
-        let viewModel = DisneyCharacterDetailsViewModel(character: character)
+    static func create(with navigationData: DisneyCharacterDetailsNavigationData) -> Self {
+        let viewModel = DisneyCharacterDetailsViewModel(navigationData: navigationData)
         return DisneyCharacterDetailsView(viewModel: viewModel)
     }
 }
 
-#Preview {
-    NavigationStack {
-        DisneyCharacterDetailsView.create(character: .mock())
-            .navigationBarTitleDisplayMode(.inline)
-    }
-}
+//#Preview {
+//    NavigationStack {
+//        DisneyCharacterDetailsView.create(characterId: <#T##Int#>)
+//            .navigationBarTitleDisplayMode(.inline)
+//    }
+//}

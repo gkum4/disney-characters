@@ -55,8 +55,8 @@ struct DisneyCharacterDetailsMediaSectionView: View {
     }
 }
 
-#Preview {
-    DisneyCharacterDetailsMediaSectionView(initialSelectedMediaType: .film)
-        .environmentObject(DisneyCharacterDetailsViewModel(character: .mock()))
-        .padding()
-}
+//#Preview {
+//    DisneyCharacterDetailsMediaSectionView(initialSelectedMediaType: .film)
+//        .environmentObject(DisneyCharacterDetailsViewModel(character: .mock()))
+//        .padding()
+//}

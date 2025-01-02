@@ -19,9 +19,9 @@ final class DisneyCharacterDetailsCoordinator: CoordinatorProtocol {
         self.navigationController = navigationController
     }
     
-    func start(with character: DisneyCharacter) {
+    func start(with navigationData: DisneyCharacterDetailsNavigationData) {
         navigationController.show(
-            UIHostingController(rootView: DisneyCharacterDetailsView.create(character: character)),
+            UIHostingController(rootView: DisneyCharacterDetailsView.create(with: navigationData)),
             sender: self
         )
     }
