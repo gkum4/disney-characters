@@ -69,10 +69,10 @@ extension DisneyCharacterDetailsViewModel {
         isLoading = false
         
         switch result {
-        case .success(let success):
+        case .success:
             isFavorited = true
             toastMessage = "Personagem favoritado!"
-        case .failure(let failure):
+        case .failure:
             error = .generic
         }
     }
@@ -83,10 +83,10 @@ extension DisneyCharacterDetailsViewModel {
         isLoading = false
         
         switch result {
-        case .success(let success):
+        case .success:
             isFavorited = false
             toastMessage = "Personagem desfavoritado!"
-        case .failure(let failure):
+        case .failure:
             error = .generic
         }
     }
