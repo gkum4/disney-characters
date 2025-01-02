@@ -93,7 +93,6 @@
 		0C83528D2D236849005384A9 /* DisneyCharacters.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C83528B2D236849005384A9 /* DisneyCharacters.xcdatamodeld */; };
 		0C8352942D236A51005384A9 /* CDFavoritedDisneyCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352922D236A51005384A9 /* CDFavoritedDisneyCharacter.swift */; };
 		0C83529D2D236DE1005384A9 /* CDFetchFavoritedDisneyCharacterMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83529C2D236DE1005384A9 /* CDFetchFavoritedDisneyCharacterMapper.swift */; };
-		0C8352AF2D2379DF005384A9 /* FavoritedDisneyCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352AE2D2379DF005384A9 /* FavoritedDisneyCharacter.swift */; };
 		0C8352B12D237A4A005384A9 /* CDModelMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352B02D237A4A005384A9 /* CDModelMapperProtocol.swift */; };
 		0C8352B42D237AF6005384A9 /* CDSaveFavoritedDisneyCharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352B32D237AF6005384A9 /* CDSaveFavoritedDisneyCharacterService.swift */; };
 		0C8352B72D237B10005384A9 /* SaveFavoritedDisneyCharacterServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352B62D237B10005384A9 /* SaveFavoritedDisneyCharacterServiceProtocol.swift */; };
@@ -101,7 +100,6 @@
 		0C8352BD2D237D8B005384A9 /* StubCDFetchFavoritedDisneyCharacterMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352BC2D237D8B005384A9 /* StubCDFetchFavoritedDisneyCharacterMapper.swift */; };
 		0C8352C02D237E43005384A9 /* CDFavoritedDisneyCharacter+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352BF2D237E43005384A9 /* CDFavoritedDisneyCharacter+Mock.swift */; };
 		0C8352C32D237F60005384A9 /* TestCDSaveFavoritedDisneyCharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352C22D237F60005384A9 /* TestCDSaveFavoritedDisneyCharacterService.swift */; };
-		0C8352C52D237FDA005384A9 /* FavoritedDisneyCharacter+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352C42D237FDA005384A9 /* FavoritedDisneyCharacter+Mock.swift */; };
 		0C8352C92D2380D9005384A9 /* DeleteFavoritedDisneyCharacterServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352C82D2380D9005384A9 /* DeleteFavoritedDisneyCharacterServiceProtocol.swift */; };
 		0C8352CB2D238102005384A9 /* CDDeleteFavoritedDisneyCharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352CA2D238102005384A9 /* CDDeleteFavoritedDisneyCharacterService.swift */; };
 		0C8352CE2D2381F4005384A9 /* TestCDDeleteFavoritedDisneyCharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352CD2D2381F4005384A9 /* TestCDDeleteFavoritedDisneyCharacterService.swift */; };
@@ -126,6 +124,14 @@
 		0C83532E2D273505005384A9 /* MyListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83532D2D273505005384A9 /* MyListCoordinator.swift */; };
 		0C8353302D2735CF005384A9 /* MyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83532F2D2735CF005384A9 /* MyListView.swift */; };
 		0C8353322D273602005384A9 /* MyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8353312D273602005384A9 /* MyListViewModel.swift */; };
+		0C8353352D273AE2005384A9 /* CDDisneyMediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8353332D273AE2005384A9 /* CDDisneyMediaItem.swift */; };
+		0C8353382D273B84005384A9 /* CDDisneyMediaItem+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8353372D273B84005384A9 /* CDDisneyMediaItem+Mock.swift */; };
+		0C83533F2D273C76005384A9 /* FetchDisneyMediaItemsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83533E2D273C76005384A9 /* FetchDisneyMediaItemsServiceProtocol.swift */; };
+		0C8353412D273C97005384A9 /* DisneyMediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8353402D273C97005384A9 /* DisneyMediaItem.swift */; };
+		0C8353432D273D52005384A9 /* DisneyMediaItem+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8353422D273D52005384A9 /* DisneyMediaItem+Mock.swift */; };
+		0C8353452D273DB2005384A9 /* CDFetchDisneyMediaItemsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8353442D273DB2005384A9 /* CDFetchDisneyMediaItemsService.swift */; };
+		0C8353482D273DFB005384A9 /* CDFetchDisneyMediaItemMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8353472D273DFB005384A9 /* CDFetchDisneyMediaItemMapper.swift */; };
+		0C83534E2D274066005384A9 /* TestFetchDisneyMediaItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83534D2D274066005384A9 /* TestFetchDisneyMediaItemService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -236,7 +242,6 @@
 		0C83528C2D236849005384A9 /* DisneyCharacters.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DisneyCharacters.xcdatamodel; sourceTree = "<group>"; };
 		0C8352922D236A51005384A9 /* CDFavoritedDisneyCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDFavoritedDisneyCharacter.swift; sourceTree = "<group>"; };
 		0C83529C2D236DE1005384A9 /* CDFetchFavoritedDisneyCharacterMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDFetchFavoritedDisneyCharacterMapper.swift; sourceTree = "<group>"; };
-		0C8352AE2D2379DF005384A9 /* FavoritedDisneyCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritedDisneyCharacter.swift; sourceTree = "<group>"; };
 		0C8352B02D237A4A005384A9 /* CDModelMapperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDModelMapperProtocol.swift; sourceTree = "<group>"; };
 		0C8352B32D237AF6005384A9 /* CDSaveFavoritedDisneyCharacterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDSaveFavoritedDisneyCharacterService.swift; sourceTree = "<group>"; };
 		0C8352B62D237B10005384A9 /* SaveFavoritedDisneyCharacterServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFavoritedDisneyCharacterServiceProtocol.swift; sourceTree = "<group>"; };
@@ -244,7 +249,6 @@
 		0C8352BC2D237D8B005384A9 /* StubCDFetchFavoritedDisneyCharacterMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubCDFetchFavoritedDisneyCharacterMapper.swift; sourceTree = "<group>"; };
 		0C8352BF2D237E43005384A9 /* CDFavoritedDisneyCharacter+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDFavoritedDisneyCharacter+Mock.swift"; sourceTree = "<group>"; };
 		0C8352C22D237F60005384A9 /* TestCDSaveFavoritedDisneyCharacterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCDSaveFavoritedDisneyCharacterService.swift; sourceTree = "<group>"; };
-		0C8352C42D237FDA005384A9 /* FavoritedDisneyCharacter+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoritedDisneyCharacter+Mock.swift"; sourceTree = "<group>"; };
 		0C8352C82D2380D9005384A9 /* DeleteFavoritedDisneyCharacterServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFavoritedDisneyCharacterServiceProtocol.swift; sourceTree = "<group>"; };
 		0C8352CA2D238102005384A9 /* CDDeleteFavoritedDisneyCharacterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDDeleteFavoritedDisneyCharacterService.swift; sourceTree = "<group>"; };
 		0C8352CD2D2381F4005384A9 /* TestCDDeleteFavoritedDisneyCharacterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCDDeleteFavoritedDisneyCharacterService.swift; sourceTree = "<group>"; };
@@ -269,6 +273,14 @@
 		0C83532D2D273505005384A9 /* MyListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListCoordinator.swift; sourceTree = "<group>"; };
 		0C83532F2D2735CF005384A9 /* MyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListView.swift; sourceTree = "<group>"; };
 		0C8353312D273602005384A9 /* MyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListViewModel.swift; sourceTree = "<group>"; };
+		0C8353332D273AE2005384A9 /* CDDisneyMediaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDDisneyMediaItem.swift; sourceTree = "<group>"; };
+		0C8353372D273B84005384A9 /* CDDisneyMediaItem+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDDisneyMediaItem+Mock.swift"; sourceTree = "<group>"; };
+		0C83533E2D273C76005384A9 /* FetchDisneyMediaItemsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDisneyMediaItemsServiceProtocol.swift; sourceTree = "<group>"; };
+		0C8353402D273C97005384A9 /* DisneyMediaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyMediaItem.swift; sourceTree = "<group>"; };
+		0C8353422D273D52005384A9 /* DisneyMediaItem+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DisneyMediaItem+Mock.swift"; sourceTree = "<group>"; };
+		0C8353442D273DB2005384A9 /* CDFetchDisneyMediaItemsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDFetchDisneyMediaItemsService.swift; sourceTree = "<group>"; };
+		0C8353472D273DFB005384A9 /* CDFetchDisneyMediaItemMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDFetchDisneyMediaItemMapper.swift; sourceTree = "<group>"; };
+		0C83534D2D274066005384A9 /* TestFetchDisneyMediaItemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFetchDisneyMediaItemService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -424,7 +436,7 @@
 			children = (
 				0C8351F02D21F979005384A9 /* DisneyCharacter+Mock.swift */,
 				0C8351F22D21FA0C005384A9 /* DisneyCharactersPage+Mock.swift */,
-				0C8352C42D237FDA005384A9 /* FavoritedDisneyCharacter+Mock.swift */,
+				0C8353422D273D52005384A9 /* DisneyMediaItem+Mock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -432,11 +444,9 @@
 		0C8351672D20C8D3005384A9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				0C8352C62D2380C2005384A9 /* DeleteFavoritedDisneyCharacterService */,
-				0C8352B22D237AE1005384A9 /* SaveFavoritedDisneyCharacterService */,
-				0C83527D2D2364C9005384A9 /* FetchFavoritedDisneyCharactersService */,
-				0C8351D82D21F53E005384A9 /* FetchDisneyCharactersPageService */,
-				0C8351E22D21F5CE005384A9 /* FetchDisneyCharacterService */,
+				0C83533B2D273C46005384A9 /* DisneyMediaItem */,
+				0C83533A2D273C38005384A9 /* DisneyCharacter */,
+				0C8353392D273C2C005384A9 /* FavoritedDisneyCharacter */,
 				0C8351E02D21F5B4005384A9 /* Shared */,
 			);
 			path = Services;
@@ -504,7 +514,7 @@
 				0C8353002D270A2F005384A9 /* EmptyState */,
 				0C83518F2D20F62A005384A9 /* DisneyCharacter.swift */,
 				0C8351912D20F64F005384A9 /* DisneyCharactersPage.swift */,
-				0C8352AE2D2379DF005384A9 /* FavoritedDisneyCharacter.swift */,
+				0C8353402D273C97005384A9 /* DisneyMediaItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -670,11 +680,9 @@
 		0C8351ED2D21F79E005384A9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				0C8352CC2D2381DF005384A9 /* DeleteFavoritedDisneyCharacterService */,
-				0C8352C12D237F4A005384A9 /* SaveFavoritedDisneyCharacterService */,
-				0C8352B82D237CA3005384A9 /* FetchFavoritedDisneyCharactersService */,
-				0C83520B2D2206AA005384A9 /* FetchDisneyCharacterService */,
-				0C8351F52D21FB3D005384A9 /* FetchDisneyCharactersPageService */,
+				0C83534B2D274036005384A9 /* FavoritedDisneyCharacter */,
+				0C83534A2D274030005384A9 /* DisneyCharacter */,
+				0C8353492D274029005384A9 /* DisneyMediaItem */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -928,6 +936,7 @@
 			children = (
 				0C8352BE2D237E37005384A9 /* Mocks */,
 				0C8352922D236A51005384A9 /* CDFavoritedDisneyCharacter.swift */,
+				0C8353332D273AE2005384A9 /* CDDisneyMediaItem.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -988,6 +997,7 @@
 			isa = PBXGroup;
 			children = (
 				0C8352BF2D237E43005384A9 /* CDFavoritedDisneyCharacter+Mock.swift */,
+				0C8353372D273B84005384A9 /* CDDisneyMediaItem+Mock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -1178,6 +1188,94 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		0C8353392D273C2C005384A9 /* FavoritedDisneyCharacter */ = {
+			isa = PBXGroup;
+			children = (
+				0C8352C62D2380C2005384A9 /* DeleteFavoritedDisneyCharacterService */,
+				0C8352B22D237AE1005384A9 /* SaveFavoritedDisneyCharacterService */,
+				0C83527D2D2364C9005384A9 /* FetchFavoritedDisneyCharactersService */,
+			);
+			path = FavoritedDisneyCharacter;
+			sourceTree = "<group>";
+		};
+		0C83533A2D273C38005384A9 /* DisneyCharacter */ = {
+			isa = PBXGroup;
+			children = (
+				0C8351D82D21F53E005384A9 /* FetchDisneyCharactersPageService */,
+				0C8351E22D21F5CE005384A9 /* FetchDisneyCharacterService */,
+			);
+			path = DisneyCharacter;
+			sourceTree = "<group>";
+		};
+		0C83533B2D273C46005384A9 /* DisneyMediaItem */ = {
+			isa = PBXGroup;
+			children = (
+				0C83533C2D273C61005384A9 /* FetchDisneyMediaItemsService */,
+			);
+			path = DisneyMediaItem;
+			sourceTree = "<group>";
+		};
+		0C83533C2D273C61005384A9 /* FetchDisneyMediaItemsService */ = {
+			isa = PBXGroup;
+			children = (
+				0C8353462D273DF2005384A9 /* Mappers */,
+				0C83533D2D273C6A005384A9 /* Protocols */,
+				0C8353442D273DB2005384A9 /* CDFetchDisneyMediaItemsService.swift */,
+			);
+			path = FetchDisneyMediaItemsService;
+			sourceTree = "<group>";
+		};
+		0C83533D2D273C6A005384A9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0C83533E2D273C76005384A9 /* FetchDisneyMediaItemsServiceProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		0C8353462D273DF2005384A9 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				0C8353472D273DFB005384A9 /* CDFetchDisneyMediaItemMapper.swift */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		0C8353492D274029005384A9 /* DisneyMediaItem */ = {
+			isa = PBXGroup;
+			children = (
+				0C83534C2D27404D005384A9 /* FetchDisneyMediaItemsService */,
+			);
+			path = DisneyMediaItem;
+			sourceTree = "<group>";
+		};
+		0C83534A2D274030005384A9 /* DisneyCharacter */ = {
+			isa = PBXGroup;
+			children = (
+				0C83520B2D2206AA005384A9 /* FetchDisneyCharacterService */,
+				0C8351F52D21FB3D005384A9 /* FetchDisneyCharactersPageService */,
+			);
+			path = DisneyCharacter;
+			sourceTree = "<group>";
+		};
+		0C83534B2D274036005384A9 /* FavoritedDisneyCharacter */ = {
+			isa = PBXGroup;
+			children = (
+				0C8352CC2D2381DF005384A9 /* DeleteFavoritedDisneyCharacterService */,
+				0C8352C12D237F4A005384A9 /* SaveFavoritedDisneyCharacterService */,
+				0C8352B82D237CA3005384A9 /* FetchFavoritedDisneyCharactersService */,
+			);
+			path = FavoritedDisneyCharacter;
+			sourceTree = "<group>";
+		};
+		0C83534C2D27404D005384A9 /* FetchDisneyMediaItemsService */ = {
+			isa = PBXGroup;
+			children = (
+				0C83534D2D274066005384A9 /* TestFetchDisneyMediaItemService.swift */,
+			);
+			path = FetchDisneyMediaItemsService;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1326,12 +1424,12 @@
 				0C8353162D27194D005384A9 /* ToastModifier.swift in Sources */,
 				0C8351A32D20FC5A005384A9 /* FetchDisneyCharacterRequestBuilder.swift in Sources */,
 				0C83518A2D20F3C2005384A9 /* DisneyCharacterResponse.swift in Sources */,
+				0C8353412D273C97005384A9 /* DisneyMediaItem.swift in Sources */,
 				0C8351962D20F6B8005384A9 /* DisneyCharactersPageInfoResponse.swift in Sources */,
 				0C8351A02D20FA32005384A9 /* FetchDisneyCharactersPageRequestBuilder.swift in Sources */,
 				0C8352202D222FFA005384A9 /* DisneyCharacterCollectionViewCell.swift in Sources */,
 				0C8352E72D26D992005384A9 /* ErrorHandlerDelegate.swift in Sources */,
 				0C83523E2D224386005384A9 /* TabBarPage.swift in Sources */,
-				0C8352C52D237FDA005384A9 /* FavoritedDisneyCharacter+Mock.swift in Sources */,
 				0C83519D2D20F8FF005384A9 /* HTTPRequestBuilderProtocol.swift in Sources */,
 				0C8351512D20C0A9005384A9 /* DisneyCharactersViewController.swift in Sources */,
 				0C8352772D2346B9005384A9 /* DisneyCharacterDetailsMediaMenuLabelView.swift in Sources */,
@@ -1340,11 +1438,14 @@
 				0C8351902D20F62A005384A9 /* DisneyCharacter.swift in Sources */,
 				0C8352B12D237A4A005384A9 /* CDModelMapperProtocol.swift in Sources */,
 				0C8353302D2735CF005384A9 /* MyListView.swift in Sources */,
+				0C8353452D273DB2005384A9 /* CDFetchDisneyMediaItemsService.swift in Sources */,
 				0C83520A2D2204C2005384A9 /* DisneyCharacterDetailsResponse+Mock.swift in Sources */,
+				0C8353382D273B84005384A9 /* CDDisneyMediaItem+Mock.swift in Sources */,
 				0C8352432D2247C7005384A9 /* UIViewController+DismissKeyboard.swift in Sources */,
 				0C83517A2D20CF5E005384A9 /* URLSession+HTTPClientProtocol.swift in Sources */,
 				0C8351942D20F6A0005384A9 /* DisneyCharactersPageResponse.swift in Sources */,
 				0C8352C02D237E43005384A9 /* CDFavoritedDisneyCharacter+Mock.swift in Sources */,
+				0C83533F2D273C76005384A9 /* FetchDisneyMediaItemsServiceProtocol.swift in Sources */,
 				0C8352652D232960005384A9 /* DisneyCharacterDetailsView.swift in Sources */,
 				0C8351F12D21F979005384A9 /* DisneyCharacter+Mock.swift in Sources */,
 				0C8351D02D21F2E5005384A9 /* ServiceTaskErrorMapper.swift in Sources */,
@@ -1365,6 +1466,7 @@
 				0C8352042D2203F8005384A9 /* DisneyCharactersPageResponse+Mock.swift in Sources */,
 				0C8352062D220437005384A9 /* DisneyCharactersPageInfoResponse+Mock.swift in Sources */,
 				0C8352532D22EAEC005384A9 /* CustomViewController.swift in Sources */,
+				0C8353432D273D52005384A9 /* DisneyMediaItem+Mock.swift in Sources */,
 				0C83525D2D22FB60005384A9 /* TabBarCoordinator.swift in Sources */,
 				0C8351BC2D210949005384A9 /* DecodeMapper.swift in Sources */,
 				0C8351F32D21FA0C005384A9 /* DisneyCharactersPage+Mock.swift in Sources */,
@@ -1372,13 +1474,13 @@
 				0C8352242D22337D005384A9 /* GlobalLayoutMetrics.swift in Sources */,
 				0C8351C82D219279005384A9 /* HTTPTaskResultMapperProtocol.swift in Sources */,
 				0C8352372D224139005384A9 /* TabBarController.swift in Sources */,
+				0C8353482D273DFB005384A9 /* CDFetchDisneyMediaItemMapper.swift in Sources */,
 				0C8353082D270B24005384A9 /* DisneyCharacterDetailsError.swift in Sources */,
 				0C8351DF2D21F577005384A9 /* FetchDisneyCharactersPageServiceProtocol.swift in Sources */,
 				0C8353192D271B8C005384A9 /* View+ToastModifier.swift in Sources */,
 				0C8351B12D2100ED005384A9 /* DisneyCharacterDetailsResponse.swift in Sources */,
 				0C8352832D236508005384A9 /* FetchFavoritedDisneyCharactersServiceProtocol.swift in Sources */,
 				0C8353022D270A41005384A9 /* DisneyCharacter+EmptyState.swift in Sources */,
-				0C8352AF2D2379DF005384A9 /* FavoritedDisneyCharacter.swift in Sources */,
 				0C8352B42D237AF6005384A9 /* CDSaveFavoritedDisneyCharacterService.swift in Sources */,
 				0C83517F2D20E075005384A9 /* HTTPTaskError.swift in Sources */,
 				0C8352B72D237B10005384A9 /* SaveFavoritedDisneyCharacterServiceProtocol.swift in Sources */,
@@ -1388,6 +1490,7 @@
 				0C8351DD2D21F559005384A9 /* RemoteFetchDisneyCharactersPageService.swift in Sources */,
 				0C8352792D2349D5005384A9 /* Colors.swift in Sources */,
 				0C83526B2D23297E005384A9 /* DisneyCharacterDetailsCoordinator.swift in Sources */,
+				0C8353352D273AE2005384A9 /* CDDisneyMediaItem.swift in Sources */,
 				0C8352942D236A51005384A9 /* CDFavoritedDisneyCharacter.swift in Sources */,
 				0C8351922D20F64F005384A9 /* DisneyCharactersPage.swift in Sources */,
 				0C8352F92D26E9B6005384A9 /* DisneyCharactersCollectionManager.swift in Sources */,
@@ -1432,6 +1535,7 @@
 				0C8351EC2D21F74A005384A9 /* StubServiceTaskErrorMapper.swift in Sources */,
 				0C8353252D272F0C005384A9 /* StubSaveFavoritedDisneyCharacterService.swift in Sources */,
 				0C8351E82D21F6B1005384A9 /* StubFetchDisneyCharactersPageMapper.swift in Sources */,
+				0C83534E2D274066005384A9 /* TestFetchDisneyMediaItemService.swift in Sources */,
 				0C8352CE2D2381F4005384A9 /* TestCDDeleteFavoritedDisneyCharacterService.swift in Sources */,
 				0C8351D62D21F4D1005384A9 /* StubHTTPClient.swift in Sources */,
 				0C8353202D272E67005384A9 /* TestDisneyCharacterDetailsViewModel.swift in Sources */,

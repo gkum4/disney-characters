@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22758" systemVersion="23F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="CDDisneyMediaItem" representedClassName=".CDDisneyMediaItem" syncable="YES">
+        <attribute name="mediaType" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="reviewScore" optional="YES" attributeType="String"/>
+        <attribute name="watched" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
     <entity name="CDFavoritedDisneyCharacter" representedClassName=".CDFavoritedDisneyCharacter" syncable="YES">
         <attribute name="films" attributeType="Binary"/>
         <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>

@@ -9,11 +9,11 @@ import Foundation
 @testable import DisneyCharacters
 
 final class StubCDFetchFavoritedDisneyCharacterMapper: CDModelMapperProtocol {
-    var result: Result<FavoritedDisneyCharacter, ServiceError>?
+    var result: Result<DisneyCharacter, ServiceError>?
     
     func map(
         _ cdModel: CDFavoritedDisneyCharacter
-    ) -> Result<FavoritedDisneyCharacter, ServiceError> {
+    ) -> Result<DisneyCharacter, ServiceError> {
         guard let result else { return .failure(.decodeError) }
         return result
     }
