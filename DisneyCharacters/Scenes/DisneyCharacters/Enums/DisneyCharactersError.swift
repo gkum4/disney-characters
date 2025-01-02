@@ -8,7 +8,7 @@
 import Foundation
 
 enum DisneyCharactersError: Error {
-    case notFound
+    case fetchCharactersNotFound
     case network
     case generic
 }

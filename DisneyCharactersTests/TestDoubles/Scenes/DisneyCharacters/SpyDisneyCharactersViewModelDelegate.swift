@@ -12,7 +12,7 @@ final class SpyDisneyCharactersViewModelDelegate: DisneyCharactersViewModelDeleg
     var fetchCharactersFailedInvoked: Bool = false
     var fetchCharactersFailedError: DisneyCharactersError?
     
-    func fetchCharactersFailed(with error: DisneyCharactersError) {
+    func handleError(_ error: DisneyCharactersError) {
         fetchCharactersFailedInvoked = true
         fetchCharactersFailedError = error
     }

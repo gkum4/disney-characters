@@ -8,6 +8,7 @@
 import Foundation
 
 enum ServiceError: Error {
+    case encodeError
     case decodeError
     case serverError(statusCode: Int)
     case requestTimedOut

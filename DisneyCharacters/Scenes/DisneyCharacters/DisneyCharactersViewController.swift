@@ -23,12 +23,12 @@ final class DisneyCharactersViewController: CustomViewController {
         return searchBar
     }()
     
-    private lazy var starBarButtonItem: UIBarButtonItem = {
+    private lazy var favoriteBarButtonItem: UIBarButtonItem = {
         let barButtonItem = UIBarButtonItem(
-            image: UIImage(systemName: "star"),
+            image: UIImage(systemName: "heart"),
             style: .plain,
             target: self,
-            action: #selector(handleStarTapped)
+            action: #selector(handleFavoriteIconTapped)
         )
         barButtonItem.tintColor = .purple
         return barButtonItem
@@ -57,17 +57,25 @@ final class DisneyCharactersViewController: CustomViewController {
             collectionViewLayout: collectionViewLayout
         )
         collectionView.backgroundColor = .systemBackground
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        collectionView.delegate = collectionManager
+        collectionView.dataSource = collectionManager
         collectionView.showsVerticalScrollIndicator = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()
     
+    private lazy var selectedCollectionManager: DisneyCharactersCollectionManagerProtocol = collectionManager
+    private lazy var collectionManager = DisneyCharactersCollectionManager(
+        viewModel: viewModel,
+        coordinator: coordinator
+    )
+    private lazy var favoritedCollectionManager = DisneyCharactersFavoritedCollectionManager(
+        viewModel: viewModel,
+        coordinator: coordinator
+    )
+    
     private var searchTask: Task<Void, Never>?
     private var searchTimer: Timer?
-    
-    private var favoritesView: Bool = false
     
     private let viewModel: DisneyCharactersViewModel
     private weak var coordinator: DisneyCharactersCoordinatorProtocol?
@@ -96,9 +104,22 @@ final class DisneyCharactersViewController: CustomViewController {
         
         Task {
             showScreenLoading()
-            await viewModel.fetchCharacters()
+            
+            async let fetchCharacters: () = viewModel.fetchCharacters()
+            async let fetchFavoritedCharacters: () = viewModel.fetchFavoritedCharacters()
+            _ = await [fetchCharacters, fetchFavoritedCharacters]
+            
             collectionView.reloadData()
             hideScreenLoading()
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        Task {
+            await viewModel.fetchFavoritedCharacters()
+            collectionView.reloadData()
         }
     }
 }
@@ -123,7 +144,7 @@ extension DisneyCharactersViewController {
     
     private func setupNavigationBar() {
         title = "Personagens"
-        navigationItem.rightBarButtonItem = starBarButtonItem
+        navigationItem.rightBarButtonItem = favoriteBarButtonItem
         navigationItem.titleView = searchBar
     }
     
@@ -131,59 +152,29 @@ extension DisneyCharactersViewController {
         searchBar.endEditing(true)
     }
     
-    @objc private func handleStarTapped() {
-        // TODO: change to favorites view
-        favoritesView.toggle()
-        starBarButtonItem.image = UIImage(systemName: favoritesView ? "star.fill" : "star")
-    }
-}
-
-extension DisneyCharactersViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(
-        _ collectionView: UICollectionView,
-        numberOfItemsInSection section: Int
-    ) -> Int {
-        return viewModel.charactersCount
-    }
-    
-    func collectionView(
-        _ collectionView: UICollectionView,
-        cellForItemAt indexPath: IndexPath
-    ) -> UICollectionViewCell {
-        guard 
-            let cell = collectionView.dequeueReusableCell(
-                withReuseIdentifier: DisneyCharacterCollectionViewCell.identifier,
-                for: indexPath
-            ) as? DisneyCharacterCollectionViewCell
-        else {
-            return .init()
+    @objc private func handleFavoriteIconTapped() {
+        switch viewModel.displayMode {
+        case .characters:
+            viewModel.displayMode = .favoritedCharacters
+            favoriteBarButtonItem.image = UIImage(systemName: "heart.fill")
+            selectedCollectionManager = favoritedCollectionManager
+            searchBar.text = viewModel.favoritedCharactersKeyword
+            
+        case .favoritedCharacters:
+            viewModel.displayMode = .characters
+            favoriteBarButtonItem.image = UIImage(systemName: "heart")
+            selectedCollectionManager = collectionManager
+            searchBar.text = viewModel.charactersKeyword
         }
         
-        cell.fill(with: viewModel.characters[indexPath.item])
-        return cell
-    }
-    
-    func collectionView(
-        _ collectionView: UICollectionView,
-        willDisplay cell: UICollectionViewCell,
-        forItemAt indexPath: IndexPath
-    ) {
-        guard viewModel.canFetchNextPage(currentItem: indexPath.item) else { return }
-        
-        Task {
-            await viewModel.fetchNextPage()
-            collectionView.reloadData()
-        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let character = viewModel.characters[indexPath.item]
-        coordinator?.goToDisneyCharacterDetails(with: character)
+        collectionView.delegate = selectedCollectionManager
+        collectionView.dataSource = selectedCollectionManager
+        collectionView.reloadData()
     }
 }
 
 extension DisneyCharactersViewController: DisneyCharactersViewModelDelegate {
-    func fetchCharactersFailed(with error: DisneyCharactersError) {
+    func handleError(_ error: DisneyCharactersError) {
         // TODO: handle errors
     }
 }
@@ -199,7 +190,8 @@ extension DisneyCharactersViewController: UISearchBarDelegate {
             searchTask = Task { @MainActor in
                 self.showScreenLoading()
                 
-                await self.viewModel.fetchCharacters(with: searchText)
+                self.viewModel.clearVariables()
+                await self.selectedCollectionManager.search(with: searchText)
                 self.collectionView.reloadData()
                 
                 self.hideScreenLoading()

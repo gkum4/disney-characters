@@ -91,7 +91,7 @@ extension DisneyCharacterCollectionViewCell {
 
 extension DisneyCharacterCollectionViewCell {
     func fill(with disneyCharacter: DisneyCharacter) {
-        imageView.kf.setImage(with: disneyCharacter.imageUrl)
-        nameLabel.text = disneyCharacter.name
+        self.imageView.kf.setImage(with: disneyCharacter.imageUrl)
+        self.nameLabel.text = disneyCharacter.name
     }
 }

@@ -16,5 +16,7 @@ enum DisneyCharactersMetrics {
         static let imageHeight: CGFloat = 180
         static let imageWidth: CGFloat = 120
         static let height: CGFloat = 230
+        static let favoriteSize: CGFloat = 28
+        static let favoritePadding: CGFloat = 4
     }
 }

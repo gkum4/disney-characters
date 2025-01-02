@@ -81,20 +81,20 @@ extension TestDisneyCharactersViewModel {
         XCTAssertFalse(result)
     }
     
-    func test_fetchCharactersWithSearchKeyword_shouldClearAndSetCharactersAndCount() async {
+    func test_fetchCharactersWithSearchKeyword_shouldIncrementCharactersAndCount() async {
         // Given
         let mockModel = DisneyCharactersPage.mock()
         fetchCharactersPageService.result = .success(mockModel)
-        await sut.fetchCharacters()
-        await sut.fetchCharacters()
-        await sut.fetchCharacters()
+        var totalExpectedCharacters: Int = 0
         
         for _ in 0..<3 {
             // When
-            await sut.fetchCharacters(with: "Não retornar resultados")
+            await sut.fetchCharacters(with: "Teste")
+            totalExpectedCharacters += mockModel.characters.count
             
             // Then
-            XCTAssertTrue(sut.charactersCount == mockModel.characters.count)
+            XCTAssertTrue(sut.charactersCount == totalExpectedCharacters)
+            XCTAssertTrue(sut.characters.count == totalExpectedCharacters)
         }
     }
 }

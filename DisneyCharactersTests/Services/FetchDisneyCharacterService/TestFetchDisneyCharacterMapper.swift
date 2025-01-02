@@ -12,11 +12,11 @@ import XCTest
 final class TestFetchDisneyCharacterMapper: XCTestCase {
     var sut: FetchDisneyCharacterMapper!
     var statusCodeMapper: StubStatusCodeMapper!
-    var decodeMapper: StubDecodeMapper<DisneyCharacterResponse>!
+    var decodeMapper: StubDecodeMapper<DisneyCharacterDetailsResponse>!
     
     override func setUp() {
         statusCodeMapper = StubStatusCodeMapper()
-        decodeMapper = StubDecodeMapper<DisneyCharacterResponse>()
+        decodeMapper = StubDecodeMapper<DisneyCharacterDetailsResponse>()
         sut = FetchDisneyCharacterMapper(
             statusCodeMapper: statusCodeMapper,
             decodeMapper: decodeMapper
@@ -36,7 +36,7 @@ final class TestFetchDisneyCharacterMapper: XCTestCase {
 extension TestFetchDisneyCharacterMapper {
     func test_map_whenSuccess_shouldReturnDomainModel() {
         // Given
-        let mockModel = DisneyCharacterResponse.mock()
+        let mockModel = DisneyCharacterDetailsResponse.mock()
         statusCodeMapper.result = .success(())
         decodeMapper.result = .success(mockModel)
         
@@ -48,7 +48,7 @@ extension TestFetchDisneyCharacterMapper {
             XCTFail()
             return
         }
-        XCTAssertTrue(model.id == mockModel.id)
+        XCTAssertTrue(model.id == mockModel.data.id)
     }
     
     func test_map_whenStatusCodeMapperFails_shouldReturnCorrespondingError() {

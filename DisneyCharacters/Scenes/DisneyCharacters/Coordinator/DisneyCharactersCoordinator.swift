@@ -8,7 +8,7 @@
 import UIKit
 
 protocol DisneyCharactersCoordinatorProtocol: CoordinatorProtocol {
-    func goToDisneyCharacterDetails(with model: DisneyCharacter)
+    func goToDisneyCharacterDetails(with navigationData: DisneyCharacterDetailsNavigationData)
 }
 
 class DisneyCharactersCoordinator: CoordinatorProtocol {
@@ -28,11 +28,11 @@ class DisneyCharactersCoordinator: CoordinatorProtocol {
 }
 
 extension DisneyCharactersCoordinator: DisneyCharactersCoordinatorProtocol {
-    func goToDisneyCharacterDetails(with character: DisneyCharacter) {
+    func goToDisneyCharacterDetails(with navigationData: DisneyCharacterDetailsNavigationData) {
         let disneyCharacterDetailsCoordinator = DisneyCharacterDetailsCoordinator(
             navigationController: navigationController
         )
         childCoordinators.append(disneyCharacterDetailsCoordinator)
-        disneyCharacterDetailsCoordinator.start(with: character)
+        disneyCharacterDetailsCoordinator.start(with: navigationData)
     }
 }
