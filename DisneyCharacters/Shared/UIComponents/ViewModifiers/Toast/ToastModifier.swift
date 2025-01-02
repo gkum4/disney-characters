@@ -32,7 +32,7 @@ struct ToastModifier: ViewModifier {
                     .opacity(opacity)
                     .onAppear {
                         withAnimation {
-                            opacity = 0.8
+                            opacity = 1
                         }
                         
                         Task {

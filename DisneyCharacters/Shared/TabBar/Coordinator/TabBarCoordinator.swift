@@ -24,7 +24,11 @@ class TabBarCoordinator: CoordinatorProtocol {
         setupTabBarPages()
         navigationController.viewControllers = [tabBarController]
     }
-    
+}
+
+extension TabBarCoordinator: TabBarCoordinatorProtocol {}
+
+extension TabBarCoordinator {
     private func setupTabBarPages() {
         let tabBarPages: [TabBarPage] = [.disneyCharacters, .myList]
         
@@ -41,25 +45,31 @@ class TabBarCoordinator: CoordinatorProtocol {
                 let disneyCharactersCoordinator = DisneyCharactersCoordinator(
                     navigationController: disneyCharactersNavController
                 )
+                disneyCharactersCoordinator.parentCoordinator = self
                 childCoordinators.append(disneyCharactersCoordinator)
                 disneyCharactersCoordinator.start()
                 
                 return disneyCharactersNavController
                 
             case .myList:
-                // TODO: coordinator
-                let disneyCharactersNavController = UINavigationController(
+                let myListNavController = UINavigationController(
                     rootViewController: UIViewController()
                 )
-                disneyCharactersNavController.tabBarItem = UITabBarItem(
+                myListNavController.tabBarItem = UITabBarItem(
                     title: "Minha Lista",
                     image: UIImage(systemName: "list.bullet.circle"),
                     tag: 1
                 )
-                return disneyCharactersNavController
+                
+                let myListCoordinator = MyListCoordinator(
+                    navigationController: myListNavController
+                )
+                myListCoordinator.parentCoordinator = self
+                childCoordinators.append(myListCoordinator)
+                myListCoordinator.start()
+                
+                return myListNavController
             }
         }
     }
 }
-
-extension TabBarCoordinator: TabBarCoordinatorProtocol {}

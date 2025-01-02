@@ -123,6 +123,9 @@
 		0C8353222D272EB1005384A9 /* StubFetchDisneyCharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8353212D272EB1005384A9 /* StubFetchDisneyCharacterService.swift */; };
 		0C8353252D272F0C005384A9 /* StubSaveFavoritedDisneyCharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8353242D272F0C005384A9 /* StubSaveFavoritedDisneyCharacterService.swift */; };
 		0C8353282D272F5E005384A9 /* StubDeleteFavoritedDisneyCharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8353272D272F5E005384A9 /* StubDeleteFavoritedDisneyCharacterService.swift */; };
+		0C83532E2D273505005384A9 /* MyListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83532D2D273505005384A9 /* MyListCoordinator.swift */; };
+		0C8353302D2735CF005384A9 /* MyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83532F2D2735CF005384A9 /* MyListView.swift */; };
+		0C8353322D273602005384A9 /* MyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8353312D273602005384A9 /* MyListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -263,6 +266,9 @@
 		0C8353212D272EB1005384A9 /* StubFetchDisneyCharacterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubFetchDisneyCharacterService.swift; sourceTree = "<group>"; };
 		0C8353242D272F0C005384A9 /* StubSaveFavoritedDisneyCharacterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubSaveFavoritedDisneyCharacterService.swift; sourceTree = "<group>"; };
 		0C8353272D272F5E005384A9 /* StubDeleteFavoritedDisneyCharacterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubDeleteFavoritedDisneyCharacterService.swift; sourceTree = "<group>"; };
+		0C83532D2D273505005384A9 /* MyListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListCoordinator.swift; sourceTree = "<group>"; };
+		0C83532F2D2735CF005384A9 /* MyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListView.swift; sourceTree = "<group>"; };
+		0C8353312D273602005384A9 /* MyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,6 +357,7 @@
 		0C83514A2D20BECF005384A9 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				0C8353292D2734DB005384A9 /* MyList */,
 				0C83514F2D20C08D005384A9 /* DisneyCharacters */,
 				0C8352622D232899005384A9 /* DisneyCharacterDetails */,
 			);
@@ -1137,6 +1144,40 @@
 			path = DeleteFavoritedDisneyCharacterService;
 			sourceTree = "<group>";
 		};
+		0C8353292D2734DB005384A9 /* MyList */ = {
+			isa = PBXGroup;
+			children = (
+				0C83532C2D2734F0005384A9 /* Coordinator */,
+				0C83532B2D2734EB005384A9 /* ViewModel */,
+				0C83532A2D2734E6005384A9 /* Views */,
+			);
+			path = MyList;
+			sourceTree = "<group>";
+		};
+		0C83532A2D2734E6005384A9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0C83532F2D2735CF005384A9 /* MyListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0C83532B2D2734EB005384A9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0C8353312D273602005384A9 /* MyListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C83532C2D2734F0005384A9 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				0C83532D2D273505005384A9 /* MyListCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1273,6 +1314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C8353322D273602005384A9 /* MyListViewModel.swift in Sources */,
 				0C83526E2D2330D6005384A9 /* DisneyCharacterDetailsMetrics.swift in Sources */,
 				0C83516F2D20CB41005384A9 /* ServiceError.swift in Sources */,
 				0C8351762D20CE66005384A9 /* HTTPTaskResult.swift in Sources */,
@@ -1297,6 +1339,7 @@
 				0C8352F72D26E905005384A9 /* DisneyCharactersCollectionManagerProtocol.swift in Sources */,
 				0C8351902D20F62A005384A9 /* DisneyCharacter.swift in Sources */,
 				0C8352B12D237A4A005384A9 /* CDModelMapperProtocol.swift in Sources */,
+				0C8353302D2735CF005384A9 /* MyListView.swift in Sources */,
 				0C83520A2D2204C2005384A9 /* DisneyCharacterDetailsResponse+Mock.swift in Sources */,
 				0C8352432D2247C7005384A9 /* UIViewController+DismissKeyboard.swift in Sources */,
 				0C83517A2D20CF5E005384A9 /* URLSession+HTTPClientProtocol.swift in Sources */,
@@ -1325,6 +1368,7 @@
 				0C83525D2D22FB60005384A9 /* TabBarCoordinator.swift in Sources */,
 				0C8351BC2D210949005384A9 /* DecodeMapper.swift in Sources */,
 				0C8351F32D21FA0C005384A9 /* DisneyCharactersPage+Mock.swift in Sources */,
+				0C83532E2D273505005384A9 /* MyListCoordinator.swift in Sources */,
 				0C8352242D22337D005384A9 /* GlobalLayoutMetrics.swift in Sources */,
 				0C8351C82D219279005384A9 /* HTTPTaskResultMapperProtocol.swift in Sources */,
 				0C8352372D224139005384A9 /* TabBarController.swift in Sources */,
