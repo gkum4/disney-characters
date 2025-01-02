@@ -8,5 +8,5 @@
 import Foundation
 
 protocol FetchFavoritedDisneyCharactersServiceProtocol {
-    func fetch() async -> Result<[FavoritedDisneyCharacter], ServiceError>
+    func fetch() async -> Result<[DisneyCharacter], ServiceError>
 }

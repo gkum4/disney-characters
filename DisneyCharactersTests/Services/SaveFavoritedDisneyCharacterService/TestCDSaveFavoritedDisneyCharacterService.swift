@@ -29,7 +29,7 @@ final class TestCDSaveFavoritedDisneyCharacterService: XCTestCase {
 extension TestCDSaveFavoritedDisneyCharacterService {
     func test_save_shouldSaveInContext() async {
         // Given
-        let model = FavoritedDisneyCharacter.mock()
+        let model = DisneyCharacter.mock()
         
         // When
         let result = await sut.save(model)

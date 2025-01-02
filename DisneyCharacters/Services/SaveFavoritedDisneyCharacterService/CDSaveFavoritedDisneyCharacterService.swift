@@ -14,18 +14,36 @@ class CDSaveFavoritedDisneyCharacterService: SaveFavoritedDisneyCharacterService
         self.context = context
     }
     
-    func save(_ favoritedDisneyCharacter: FavoritedDisneyCharacter) async -> Result<Void, ServiceError> {
+    func save(_ disneyCharacter: DisneyCharacter) async -> Result<Void, ServiceError> {
         let cdModel = CDFavoritedDisneyCharacter(context: context)
-        cdModel.id = Int32(favoritedDisneyCharacter.id)
-        cdModel.name = favoritedDisneyCharacter.name
-        if let imageUrl = favoritedDisneyCharacter.imageUrl {
+        cdModel.id = Int32(disneyCharacter.id)
+        cdModel.name = disneyCharacter.name
+        if let imageUrl = disneyCharacter.imageUrl {
             cdModel.imageUrl = imageUrl.absoluteString
         }
+        if let sourceUrl = disneyCharacter.sourceUrl {
+            cdModel.sourceUrl = sourceUrl.absoluteString
+        }
+        guard
+            let encodedFilms = encode(disneyCharacter.films),
+            let encodedShortFilms = encode(disneyCharacter.shortFilms),
+            let encodedTvShows = encode(disneyCharacter.tvShows)
+        else {
+            return .failure(.encodeError)
+        }
+        cdModel.films = encodedFilms
+        cdModel.shortFilms = encodedShortFilms
+        cdModel.tvShows = encodedTvShows
         
         guard (try? context.save()) != nil else {
             return .failure(.apiError)
         }
         
         return .success(())
+    }
+    
+    private func encode(_ list: [String]) -> Data? {
+        guard let encoded = try? JSONEncoder().encode(list) else { return nil }
+        return encoded
     }
 }

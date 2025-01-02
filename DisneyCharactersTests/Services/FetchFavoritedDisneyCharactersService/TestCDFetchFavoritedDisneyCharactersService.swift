@@ -16,6 +16,7 @@ final class TestCDFetchFavoritedDisneyCharactersService: XCTestCase {
     
     override func setUp() {
         context = CDPersistenceController(inMemory: true).container.viewContext
+        context.reset()
         cdFetchFavoriteDisneyCharacterMapper = CDFetchFavoritedDisneyCharacterMapper()
         sut = CDFetchFavoritedDisneyCharactersService(
             context: context,
@@ -38,9 +39,9 @@ extension TestCDFetchFavoritedDisneyCharactersService {
         let mock1 = CDFavoritedDisneyCharacter.mock(context: context)
         mock1.id = 1
         let mock2 = CDFavoritedDisneyCharacter.mock(context: context)
-        mock1.id = 2
+        mock2.id = 2
         let mock3 = CDFavoritedDisneyCharacter.mock(context: context)
-        mock1.id = 3
+        mock3.id = 3
         try! context.save()
         
         // When

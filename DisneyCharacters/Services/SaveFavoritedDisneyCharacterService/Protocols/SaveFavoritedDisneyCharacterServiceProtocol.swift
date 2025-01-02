@@ -8,5 +8,5 @@
 import Foundation
 
 protocol SaveFavoritedDisneyCharacterServiceProtocol {
-    func save(_ favoritedDisneyCharacter: FavoritedDisneyCharacter) async -> Result<Void, ServiceError>
+    func save(_ disneyCharacter: DisneyCharacter) async -> Result<Void, ServiceError>
 }
