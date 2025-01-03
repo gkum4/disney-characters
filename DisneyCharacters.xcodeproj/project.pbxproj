@@ -141,6 +141,9 @@
 		0C8353672D27689E005384A9 /* UpdateDisneyMediaItemServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8353662D27689E005384A9 /* UpdateDisneyMediaItemServiceProtocol.swift */; };
 		0C83536A2D2768CD005384A9 /* CDUpdateDisneyMediaItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8353692D2768CD005384A9 /* CDUpdateDisneyMediaItemService.swift */; };
 		0C83536D2D276A0E005384A9 /* TestCDUpdateDisneyMediaItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83536C2D276A0E005384A9 /* TestCDUpdateDisneyMediaItemService.swift */; };
+		0C8353722D2774A9005384A9 /* DisneyMediaItemsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8353712D2774A9005384A9 /* DisneyMediaItemsManager.swift */; };
+		0C8353752D2774BF005384A9 /* DisneyMediaItemsManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8353742D2774BF005384A9 /* DisneyMediaItemsManagerProtocol.swift */; };
+		0C8353782D277507005384A9 /* DisneyMediaItemsManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8353772D277507005384A9 /* DisneyMediaItemsManagerError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -299,6 +302,9 @@
 		0C8353662D27689E005384A9 /* UpdateDisneyMediaItemServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDisneyMediaItemServiceProtocol.swift; sourceTree = "<group>"; };
 		0C8353692D2768CD005384A9 /* CDUpdateDisneyMediaItemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDUpdateDisneyMediaItemService.swift; sourceTree = "<group>"; };
 		0C83536C2D276A0E005384A9 /* TestCDUpdateDisneyMediaItemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCDUpdateDisneyMediaItemService.swift; sourceTree = "<group>"; };
+		0C8353712D2774A9005384A9 /* DisneyMediaItemsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyMediaItemsManager.swift; sourceTree = "<group>"; };
+		0C8353742D2774BF005384A9 /* DisneyMediaItemsManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyMediaItemsManagerProtocol.swift; sourceTree = "<group>"; };
+		0C8353772D277507005384A9 /* DisneyMediaItemsManagerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyMediaItemsManagerError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -550,6 +556,7 @@
 		0C8351C32D218FB1005384A9 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				0C83536E2D277470005384A9 /* Singletons */,
 				0C8352842D23669C005384A9 /* CoreData */,
 				0C8352552D22F368005384A9 /* Coordinator */,
 				0C8352512D22EAD3005384A9 /* CustomViewController */,
@@ -1375,6 +1382,40 @@
 			path = UpdateDisneyMediaItemService;
 			sourceTree = "<group>";
 		};
+		0C83536E2D277470005384A9 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				0C8353702D27749C005384A9 /* DisneyMediaItemsManager */,
+			);
+			path = Singletons;
+			sourceTree = "<group>";
+		};
+		0C8353702D27749C005384A9 /* DisneyMediaItemsManager */ = {
+			isa = PBXGroup;
+			children = (
+				0C8353762D2774F9005384A9 /* Enums */,
+				0C8353732D2774B5005384A9 /* Protocols */,
+				0C8353712D2774A9005384A9 /* DisneyMediaItemsManager.swift */,
+			);
+			path = DisneyMediaItemsManager;
+			sourceTree = "<group>";
+		};
+		0C8353732D2774B5005384A9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0C8353742D2774BF005384A9 /* DisneyMediaItemsManagerProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		0C8353762D2774F9005384A9 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				0C8353772D277507005384A9 /* DisneyMediaItemsManagerError.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1528,9 +1569,12 @@
 				0C8351A02D20FA32005384A9 /* FetchDisneyCharactersPageRequestBuilder.swift in Sources */,
 				0C8352202D222FFA005384A9 /* DisneyCharacterCollectionViewCell.swift in Sources */,
 				0C8352E72D26D992005384A9 /* ErrorHandlerDelegate.swift in Sources */,
+				0C8353722D2774A9005384A9 /* DisneyMediaItemsManager.swift in Sources */,
 				0C83523E2D224386005384A9 /* TabBarPage.swift in Sources */,
+				0C8353752D2774BF005384A9 /* DisneyMediaItemsManagerProtocol.swift in Sources */,
 				0C83519D2D20F8FF005384A9 /* HTTPRequestBuilderProtocol.swift in Sources */,
 				0C8351512D20C0A9005384A9 /* DisneyCharactersViewController.swift in Sources */,
+				0C8353782D277507005384A9 /* DisneyMediaItemsManagerError.swift in Sources */,
 				0C8352772D2346B9005384A9 /* DisneyCharacterDetailsMediaMenuLabelView.swift in Sources */,
 				0C8352612D22FDAF005384A9 /* DisneyCharactersCoordinator.swift in Sources */,
 				0C8352F72D26E905005384A9 /* DisneyCharactersCollectionManagerProtocol.swift in Sources */,
