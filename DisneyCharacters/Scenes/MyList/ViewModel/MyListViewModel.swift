@@ -37,11 +37,19 @@ extension MyListViewModel {
         var newMediaItem = mediaItem
         newMediaItem.watched.toggle()
         
+        if newMediaItem.watched {
+            selectedMediaItem = newMediaItem
+        } else {
+            newMediaItem.reviewScore = nil
+        }
+        
         isLoading = true
         _ = await disneyMediaItemsManager.update(newMediaItem)
         isLoading = false
         
         setupSections()
+        
+        
     }
     
     func delete(_ mediaItem: DisneyMediaItem) async {
