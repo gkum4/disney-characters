@@ -1,7 +1,7 @@
 name: test
 on:
   pull_request:
-    types: [opened, synchronizem reopened]
+    types: [opened, synchronize, reopened]
 jobs:
   test:
     runs-on: macos-14
