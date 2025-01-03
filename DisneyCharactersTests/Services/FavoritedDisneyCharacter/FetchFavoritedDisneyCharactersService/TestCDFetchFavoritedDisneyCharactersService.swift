@@ -16,7 +16,6 @@ final class TestCDFetchFavoritedDisneyCharactersService: XCTestCase {
     
     override func setUp() {
         context = CDPersistenceController(inMemory: true).container.viewContext
-        context.reset()
         cdFetchFavoriteDisneyCharacterMapper = CDFetchFavoritedDisneyCharacterMapper()
         sut = CDFetchFavoritedDisneyCharactersService(
             context: context,

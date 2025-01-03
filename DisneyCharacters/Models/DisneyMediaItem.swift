@@ -9,15 +9,15 @@ import Foundation
 
 struct DisneyMediaItem {
     let name: String
-    let watched: Bool
+    var watched: Bool
     let mediaType: DisneyMediaItemType
-    let reviewScore: DisneyMediaItemReviewScore?
+    var reviewScore: DisneyMediaItemReviewScore?
 }
 
-enum DisneyMediaItemType {
-    case film
-    case shortFilm
-    case tvShow
+enum DisneyMediaItemType: Int {
+    case film = 0
+    case shortFilm = 1
+    case tvShow = 2
 }
 
 enum DisneyMediaItemReviewScore: Int {
