@@ -30,6 +30,7 @@ struct MyListView: View {
         )
         .loaderOverlay(isLoading: viewModel.isLoading)
         .toast($viewModel.toastMessage)
+        .myListEmptyState(sectionsData: viewModel.sectionsData, isLoading: viewModel.isLoading)
         .navigationBarBackButtonHidden()
         .navigationTitle("Minha Lista")
         .navigationBarTitleDisplayMode(.large)

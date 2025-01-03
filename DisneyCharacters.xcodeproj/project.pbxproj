@@ -150,6 +150,8 @@
 		0C8C61682D287A8B00D1C240 /* DisneyCharacters.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C8C61662D287A8B00D1C240 /* DisneyCharacters.xcdatamodeld */; };
 		0C8C616B2D287ABE00D1C240 /* TestMyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8C616A2D287ABE00D1C240 /* TestMyListViewModel.swift */; };
 		0C8C616F2D287B0600D1C240 /* SpyDisneyMediaItemsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8C616E2D287B0600D1C240 /* SpyDisneyMediaItemsManager.swift */; };
+		0C8C61762D28836700D1C240 /* MyListEmptyStateModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8C61752D28836700D1C240 /* MyListEmptyStateModifier.swift */; };
+		0C8C61782D28846600D1C240 /* View+MyListEmptyStateModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8C61772D28846600D1C240 /* View+MyListEmptyStateModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -318,6 +320,8 @@
 		0C8C61672D287A8B00D1C240 /* DisneyCharacters.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DisneyCharacters.xcdatamodel; sourceTree = "<group>"; };
 		0C8C616A2D287ABE00D1C240 /* TestMyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMyListViewModel.swift; sourceTree = "<group>"; };
 		0C8C616E2D287B0600D1C240 /* SpyDisneyMediaItemsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyDisneyMediaItemsManager.swift; sourceTree = "<group>"; };
+		0C8C61752D28836700D1C240 /* MyListEmptyStateModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListEmptyStateModifier.swift; sourceTree = "<group>"; };
+		0C8C61772D28846600D1C240 /* View+MyListEmptyStateModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+MyListEmptyStateModifier.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1457,6 +1461,7 @@
 		0C8353862D27965E005384A9 /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
+				0C8C61742D28835700D1C240 /* MyListEmptyStateModifier */,
 				0C8353872D279669005384A9 /* MyListReviewAlertModifier */,
 			);
 			path = ViewModifiers;
@@ -1505,6 +1510,15 @@
 				0C8C616E2D287B0600D1C240 /* SpyDisneyMediaItemsManager.swift */,
 			);
 			path = DisneyMediaItemsManager;
+			sourceTree = "<group>";
+		};
+		0C8C61742D28835700D1C240 /* MyListEmptyStateModifier */ = {
+			isa = PBXGroup;
+			children = (
+				0C8C61752D28836700D1C240 /* MyListEmptyStateModifier.swift */,
+				0C8C61772D28846600D1C240 /* View+MyListEmptyStateModifier.swift */,
+			);
+			path = MyListEmptyStateModifier;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1705,7 +1719,9 @@
 				0C8352C92D2380D9005384A9 /* DeleteFavoritedDisneyCharacterServiceProtocol.swift in Sources */,
 				0C8352732D233CB2005384A9 /* DisneyCharacterDetailsMediaSectionView.swift in Sources */,
 				0C8352042D2203F8005384A9 /* DisneyCharactersPageResponse+Mock.swift in Sources */,
+				0C8C61782D28846600D1C240 /* View+MyListEmptyStateModifier.swift in Sources */,
 				0C8352062D220437005384A9 /* DisneyCharactersPageInfoResponse+Mock.swift in Sources */,
+				0C8C61762D28836700D1C240 /* MyListEmptyStateModifier.swift in Sources */,
 				0C8352532D22EAEC005384A9 /* CustomViewController.swift in Sources */,
 				0C8353432D273D52005384A9 /* DisneyMediaItem+Mock.swift in Sources */,
 				0C83525D2D22FB60005384A9 /* TabBarCoordinator.swift in Sources */,
