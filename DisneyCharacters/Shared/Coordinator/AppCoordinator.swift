@@ -7,6 +7,8 @@
 
 import UIKit
 
+protocol AppCoordinatorProtocol: CoordinatorProtocol {}
+
 final class AppCoordinator: CoordinatorProtocol {
     var navigationController: UINavigationController
     var childCoordinators: [CoordinatorProtocol] = []

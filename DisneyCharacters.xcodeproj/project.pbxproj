@@ -369,11 +369,6 @@
 				0C8351882D20F3BA005384A9 /* Models */,
 				0C83514A2D20BECF005384A9 /* Scenes */,
 				0C8351672D20C8D3005384A9 /* Services */,
-				0C73D58B2D20A557007BBECE /* AppDelegate.swift */,
-				0C73D58D2D20A557007BBECE /* SceneDelegate.swift */,
-				0C73D5942D20A558007BBECE /* Assets.xcassets */,
-				0C73D5962D20A558007BBECE /* LaunchScreen.storyboard */,
-				0C73D5992D20A558007BBECE /* Info.plist */,
 			);
 			path = DisneyCharacters;
 			sourceTree = "<group>";
@@ -563,6 +558,7 @@
 		0C8351C32D218FB1005384A9 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				0C866AD22D285AE400EC3241 /* Essentials */,
 				0C83536E2D277470005384A9 /* Singletons */,
 				0C8352842D23669C005384A9 /* CoreData */,
 				0C8352552D22F368005384A9 /* Coordinator */,
@@ -1466,6 +1462,18 @@
 				0C83538A2D283579005384A9 /* View+MyListReviewAlertModifier.swift */,
 			);
 			path = MyListReviewAlertModifier;
+			sourceTree = "<group>";
+		};
+		0C866AD22D285AE400EC3241 /* Essentials */ = {
+			isa = PBXGroup;
+			children = (
+				0C73D58B2D20A557007BBECE /* AppDelegate.swift */,
+				0C73D58D2D20A557007BBECE /* SceneDelegate.swift */,
+				0C73D5942D20A558007BBECE /* Assets.xcassets */,
+				0C73D5962D20A558007BBECE /* LaunchScreen.storyboard */,
+				0C73D5992D20A558007BBECE /* Info.plist */,
+			);
+			path = Essentials;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

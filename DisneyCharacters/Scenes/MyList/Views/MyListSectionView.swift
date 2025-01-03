@@ -38,8 +38,8 @@ struct MyListSectionView: View {
                             Text([String](repeating: "⭐️", count: reviewScore.rawValue).joined())
                         }
                     }
-                    .foregroundStyle(.black)
                 }
+                .buttonStyle(PlainButtonStyle())
             }
             .onDelete { indexSet in
                 guard let index = indexSet.first else { return }
