@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C1F01BA2D286DE800EFBDB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C73D5962D20A558007BBECE /* LaunchScreen.storyboard */; };
 		0C73D58C2D20A557007BBECE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C73D58B2D20A557007BBECE /* AppDelegate.swift */; };
 		0C73D58E2D20A557007BBECE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C73D58D2D20A557007BBECE /* SceneDelegate.swift */; };
 		0C73D5952D20A558007BBECE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C73D5942D20A558007BBECE /* Assets.xcassets */; };
-		0C73D5982D20A558007BBECE /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 0C73D5972D20A558007BBECE /* Base */; };
 		0C73D5AD2D20A558007BBECE /* DisneyCharactersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C73D5AC2D20A558007BBECE /* DisneyCharactersUITests.swift */; };
 		0C73D5AF2D20A558007BBECE /* DisneyCharactersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C73D5AE2D20A558007BBECE /* DisneyCharactersUITestsLaunchTests.swift */; };
 		0C8351512D20C0A9005384A9 /* DisneyCharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8351502D20C0A9005384A9 /* DisneyCharactersViewController.swift */; };
@@ -168,6 +168,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C1F01B92D286D1300EFBDB5 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		0C73D5882D20A557007BBECE /* DisneyCharacters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DisneyCharacters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C73D58B2D20A557007BBECE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C73D58D2D20A557007BBECE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -1560,11 +1561,12 @@
 			};
 			buildConfigurationList = 0C73D5832D20A557007BBECE /* Build configuration list for PBXProject "DisneyCharacters" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = "pt-BR";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 0C73D57F2D20A557007BBECE;
 			packageReferences = (
@@ -1586,8 +1588,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C1F01BA2D286DE800EFBDB5 /* LaunchScreen.storyboard in Resources */,
 				0C73D5952D20A558007BBECE /* Assets.xcassets in Resources */,
-				0C73D5982D20A558007BBECE /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1787,6 +1789,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				0C73D5972D20A558007BBECE /* Base */,
+				0C1F01B92D286D1300EFBDB5 /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1799,6 +1802,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1862,6 +1866,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1922,9 +1927,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L5C36X97NN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DisneyCharacters/Info.plist;
+				INFOPLIST_FILE = DisneyCharacters/Shared/Essentials/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Disneys;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchScreen_Generation = NO;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -1950,9 +1957,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L5C36X97NN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DisneyCharacters/Info.plist;
+				INFOPLIST_FILE = DisneyCharacters/Shared/Essentials/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Disneys;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchScreen_Generation = NO;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
