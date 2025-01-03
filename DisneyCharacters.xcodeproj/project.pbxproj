@@ -88,7 +88,6 @@
 		0C83527F2D2364EB005384A9 /* CDFetchFavoritedDisneyCharactersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83527E2D2364EB005384A9 /* CDFetchFavoritedDisneyCharactersService.swift */; };
 		0C8352832D236508005384A9 /* FetchFavoritedDisneyCharactersServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352822D236508005384A9 /* FetchFavoritedDisneyCharactersServiceProtocol.swift */; };
 		0C83528A2D2367D2005384A9 /* CDPersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352892D2367D2005384A9 /* CDPersistenceController.swift */; };
-		0C83528D2D236849005384A9 /* DisneyCharacters.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C83528B2D236849005384A9 /* DisneyCharacters.xcdatamodeld */; };
 		0C8352942D236A51005384A9 /* CDFavoritedDisneyCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352922D236A51005384A9 /* CDFavoritedDisneyCharacter.swift */; };
 		0C83529D2D236DE1005384A9 /* CDFetchFavoritedDisneyCharacterMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83529C2D236DE1005384A9 /* CDFetchFavoritedDisneyCharacterMapper.swift */; };
 		0C8352B12D237A4A005384A9 /* CDModelMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352B02D237A4A005384A9 /* CDModelMapperProtocol.swift */; };
@@ -148,6 +147,9 @@
 		0C8353852D279529005384A9 /* MyListSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8353842D279529005384A9 /* MyListSectionView.swift */; };
 		0C8353892D279678005384A9 /* MyListReviewAlertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8353882D279678005384A9 /* MyListReviewAlertModifier.swift */; };
 		0C83538B2D283579005384A9 /* View+MyListReviewAlertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83538A2D283579005384A9 /* View+MyListReviewAlertModifier.swift */; };
+		0C8C61682D287A8B00D1C240 /* DisneyCharacters.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C8C61662D287A8B00D1C240 /* DisneyCharacters.xcdatamodeld */; };
+		0C8C616B2D287ABE00D1C240 /* TestMyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8C616A2D287ABE00D1C240 /* TestMyListViewModel.swift */; };
+		0C8C616F2D287B0600D1C240 /* SpyDisneyMediaItemsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8C616E2D287B0600D1C240 /* SpyDisneyMediaItemsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -254,7 +256,6 @@
 		0C83527E2D2364EB005384A9 /* CDFetchFavoritedDisneyCharactersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDFetchFavoritedDisneyCharactersService.swift; sourceTree = "<group>"; };
 		0C8352822D236508005384A9 /* FetchFavoritedDisneyCharactersServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchFavoritedDisneyCharactersServiceProtocol.swift; sourceTree = "<group>"; };
 		0C8352892D2367D2005384A9 /* CDPersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDPersistenceController.swift; sourceTree = "<group>"; };
-		0C83528C2D236849005384A9 /* DisneyCharacters.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DisneyCharacters.xcdatamodel; sourceTree = "<group>"; };
 		0C8352922D236A51005384A9 /* CDFavoritedDisneyCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDFavoritedDisneyCharacter.swift; sourceTree = "<group>"; };
 		0C83529C2D236DE1005384A9 /* CDFetchFavoritedDisneyCharacterMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDFetchFavoritedDisneyCharacterMapper.swift; sourceTree = "<group>"; };
 		0C8352B02D237A4A005384A9 /* CDModelMapperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDModelMapperProtocol.swift; sourceTree = "<group>"; };
@@ -314,6 +315,9 @@
 		0C8353842D279529005384A9 /* MyListSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListSectionView.swift; sourceTree = "<group>"; };
 		0C8353882D279678005384A9 /* MyListReviewAlertModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListReviewAlertModifier.swift; sourceTree = "<group>"; };
 		0C83538A2D283579005384A9 /* View+MyListReviewAlertModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+MyListReviewAlertModifier.swift"; sourceTree = "<group>"; };
+		0C8C61672D287A8B00D1C240 /* DisneyCharacters.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DisneyCharacters.xcdatamodel; sourceTree = "<group>"; };
+		0C8C616A2D287ABE00D1C240 /* TestMyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMyListViewModel.swift; sourceTree = "<group>"; };
+		0C8C616E2D287B0600D1C240 /* SpyDisneyMediaItemsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyDisneyMediaItemsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -444,6 +448,7 @@
 		0C8351612D20C478005384A9 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				0C8C61692D287AB400D1C240 /* MyList */,
 				0C83531E2D272E5A005384A9 /* DisneyCharacterDetails */,
 				0C8351622D20C47F005384A9 /* DisneyCharacters */,
 			);
@@ -576,6 +581,7 @@
 		0C8351D32D21F41B005384A9 /* TestDoubles */ = {
 			isa = PBXGroup;
 			children = (
+				0C8C616C2D287AEE00D1C240 /* Shared */,
 				0C83521A2D2215FD005384A9 /* Scenes */,
 				0C8351EA2D21F70E005384A9 /* Services */,
 				0C8351D42D21F4C6005384A9 /* Networking */,
@@ -943,7 +949,7 @@
 			isa = PBXGroup;
 			children = (
 				0C8352892D2367D2005384A9 /* CDPersistenceController.swift */,
-				0C83528B2D236849005384A9 /* DisneyCharacters.xcdatamodeld */,
+				0C8C61662D287A8B00D1C240 /* DisneyCharacters.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -1477,6 +1483,30 @@
 			path = Essentials;
 			sourceTree = "<group>";
 		};
+		0C8C61692D287AB400D1C240 /* MyList */ = {
+			isa = PBXGroup;
+			children = (
+				0C8C616A2D287ABE00D1C240 /* TestMyListViewModel.swift */,
+			);
+			path = MyList;
+			sourceTree = "<group>";
+		};
+		0C8C616C2D287AEE00D1C240 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				0C8C616D2D287AF700D1C240 /* DisneyMediaItemsManager */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		0C8C616D2D287AF700D1C240 /* DisneyMediaItemsManager */ = {
+			isa = PBXGroup;
+			children = (
+				0C8C616E2D287B0600D1C240 /* SpyDisneyMediaItemsManager.swift */,
+			);
+			path = DisneyMediaItemsManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1635,6 +1665,7 @@
 				0C8353722D2774A9005384A9 /* DisneyMediaItemsManager.swift in Sources */,
 				0C83523E2D224386005384A9 /* TabBarPage.swift in Sources */,
 				0C8353752D2774BF005384A9 /* DisneyMediaItemsManagerProtocol.swift in Sources */,
+				0C8C61682D287A8B00D1C240 /* DisneyCharacters.xcdatamodeld in Sources */,
 				0C83519D2D20F8FF005384A9 /* HTTPRequestBuilderProtocol.swift in Sources */,
 				0C8351512D20C0A9005384A9 /* DisneyCharactersViewController.swift in Sources */,
 				0C8353782D277507005384A9 /* DisneyMediaItemsManagerError.swift in Sources */,
@@ -1668,7 +1699,6 @@
 				0C8352262D2233B4005384A9 /* DisneyCharactersMetrics.swift in Sources */,
 				0C83531D2D2723BB005384A9 /* ToastModifierMetrics.swift in Sources */,
 				0C8353892D279678005384A9 /* MyListReviewAlertModifier.swift in Sources */,
-				0C83528D2D236849005384A9 /* DisneyCharacters.xcdatamodeld in Sources */,
 				0C8352582D22F373005384A9 /* CoordinatorProtocol.swift in Sources */,
 				0C83522A2D2238AF005384A9 /* UIView+Append.swift in Sources */,
 				0C8353672D27689E005384A9 /* UpdateDisneyMediaItemServiceProtocol.swift in Sources */,
@@ -1734,6 +1764,7 @@
 				0C8352102D220701005384A9 /* StubFetchDisneyCharacterMapper.swift in Sources */,
 				0C83535D2D2765CA005384A9 /* TestCDSaveDisneyMediaItemService.swift in Sources */,
 				0C8352142D2208DD005384A9 /* TestFetchDisneyCharacterRequestBuilder.swift in Sources */,
+				0C8C616B2D287ABE00D1C240 /* TestMyListViewModel.swift in Sources */,
 				0C8353222D272EB1005384A9 /* StubFetchDisneyCharacterService.swift in Sources */,
 				0C8352BA2D237CB5005384A9 /* TestCDFetchFavoritedDisneyCharactersService.swift in Sources */,
 				0C8353592D2763B6005384A9 /* TestCDDeleteDisneyMediaItemService.swift in Sources */,
@@ -1751,6 +1782,7 @@
 				0C8351FE2D220289005384A9 /* StubDecodeMapper.swift in Sources */,
 				0C8351EC2D21F74A005384A9 /* StubServiceTaskErrorMapper.swift in Sources */,
 				0C8353252D272F0C005384A9 /* StubSaveFavoritedDisneyCharacterService.swift in Sources */,
+				0C8C616F2D287B0600D1C240 /* SpyDisneyMediaItemsManager.swift in Sources */,
 				0C83536D2D276A0E005384A9 /* TestCDUpdateDisneyMediaItemService.swift in Sources */,
 				0C8351E82D21F6B1005384A9 /* StubFetchDisneyCharactersPageMapper.swift in Sources */,
 				0C83534E2D274066005384A9 /* TestCDFetchDisneyMediaItemService.swift in Sources */,
@@ -2117,14 +2149,14 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		0C83528B2D236849005384A9 /* DisneyCharacters.xcdatamodeld */ = {
+		0C8C61662D287A8B00D1C240 /* DisneyCharacters.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				0C83528C2D236849005384A9 /* DisneyCharacters.xcdatamodel */,
+				0C8C61672D287A8B00D1C240 /* DisneyCharacters.xcdatamodel */,
 			);
-			currentVersion = 0C83528C2D236849005384A9 /* DisneyCharacters.xcdatamodel */;
+			currentVersion = 0C8C61672D287A8B00D1C240 /* DisneyCharacters.xcdatamodel */;
 			name = DisneyCharacters.xcdatamodeld;
-			path = /Users/gustavokumasawa/dev/ios/DisneyCharacters/DisneyCharacters/Shared/CoreData/DisneyCharacters.xcdatamodeld;
+			path = "/Users/gustavokumasawa/dev/ios/disney-characters/DisneyCharacters/Shared/CoreData/DisneyCharacters.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
