@@ -20,6 +20,7 @@ final class MyListCoordinator: CoordinatorProtocol {
     }
     
     func start() {
+        navigationController.navigationBar.prefersLargeTitles = true
         navigationController.show(
             UIHostingController(rootView: MyListView.create()),
             sender: self

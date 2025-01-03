@@ -56,7 +56,7 @@ final class DisneyCharactersViewController: CustomViewController {
             frame: .zero,
             collectionViewLayout: collectionViewLayout
         )
-        collectionView.backgroundColor = .systemBackground
+        collectionView.backgroundColor = .secondarySystemBackground
         collectionView.delegate = collectionManager
         collectionView.dataSource = collectionManager
         collectionView.showsVerticalScrollIndicator = false

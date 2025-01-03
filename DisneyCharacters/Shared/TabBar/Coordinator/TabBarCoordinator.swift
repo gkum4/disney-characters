@@ -52,9 +52,7 @@ extension TabBarCoordinator {
                 return disneyCharactersNavController
                 
             case .myList:
-                let myListNavController = UINavigationController(
-                    rootViewController: UIViewController()
-                )
+                let myListNavController = UINavigationController()
                 myListNavController.tabBarItem = UITabBarItem(
                     title: "Minha Lista",
                     image: UIImage(systemName: "list.bullet.circle"),

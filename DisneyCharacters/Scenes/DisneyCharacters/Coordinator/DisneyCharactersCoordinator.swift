@@ -21,6 +21,12 @@ class DisneyCharactersCoordinator: CoordinatorProtocol {
     }
     
     func start() {
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithOpaqueBackground()
+        UINavigationBar.appearance().standardAppearance = navBarAppearance
+        UINavigationBar.appearance().compactAppearance = navBarAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
+        
         let disneyCharactersVC = DisneyCharactersViewController.create(coordinator: self)
         
         navigationController.show(disneyCharactersVC, sender: self)

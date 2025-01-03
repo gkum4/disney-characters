@@ -9,9 +9,9 @@ import SwiftUI
 
 struct DisneyCharacterDetailsMediaMenuLabelView: View {
     let name: String
-    let mediaType: DisneyCharacterDetailsMediaType
+    let mediaType: DisneyMediaItemType
     
-    init(name: String, mediaType: DisneyCharacterDetailsMediaType) {
+    init(name: String, mediaType: DisneyMediaItemType) {
         self.name = name
         self.mediaType = mediaType
     }
@@ -22,7 +22,7 @@ struct DisneyCharacterDetailsMediaMenuLabelView: View {
             .font(.headline)
             .padding(DisneyCharacterDetailsMetrics.MediaButtonItem.padding)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .background(mediaType.backgroundColor)
+            .background(mediaType.getBackgroundColor())
             .clipShape(.rect(cornerRadius: GlobalLayoutMetrics.cornerRadius))
     }
 }

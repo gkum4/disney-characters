@@ -14,12 +14,12 @@ final class CDDeleteDisneyMediaItemService: DeleteDisneyMediaItemServiceProtocol
         self.context = context
     }
     
-    func delete(_ mediaItem: DisneyMediaItem) async -> Result<Void, ServiceError> {
+    func delete(name: String, mediaType: DisneyMediaItemType) async -> Result<Void, ServiceError> {
         let request = CDDisneyMediaItem.fetchRequest()
         request.predicate = NSPredicate(
             format: "name == %@ AND mediaType == %d",
-            mediaItem.name,
-            mediaItem.mediaType.rawValue
+            name,
+            mediaType.rawValue
         )
         
         guard let cdDisneyMediaItems = try? context.fetch(request) else {

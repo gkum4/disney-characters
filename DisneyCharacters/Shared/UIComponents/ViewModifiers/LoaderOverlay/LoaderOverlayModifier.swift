@@ -21,8 +21,14 @@ struct LoaderOverlayModifier: ViewModifier {
             .overlay {
                 if loading {
                     ProgressView()
+                        .controlSize(.large)
                 }
             }
             .allowsHitTesting(loading ? interactionEnabled : true)
     }
+}
+
+#Preview {
+    VStack {}
+    .modifier(LoaderOverlayModifier(loading: true))
 }

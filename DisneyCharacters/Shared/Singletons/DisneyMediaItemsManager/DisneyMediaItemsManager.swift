@@ -10,14 +10,15 @@ import Foundation
 final class DisneyMediaItemsManager: DisneyMediaItemsManagerProtocol {
     var mediaItems: [DisneyMediaItem] = []
     
-    static let shared: DisneyMediaItemsManager = DisneyMediaItemsManager()
+    static let shared = DisneyMediaItemsManager()
     
+    private var initialized: Bool = false
     private let fetchDisneyMediaItemsService: FetchDisneyMediaItemsServiceProtocol
     private let saveDisneyMediaItemsService: SaveDisneyMediaItemServiceProtocol
     private let updateDisneyMediaItemsService: UpdateDisneyMediaItemServiceProtocol
     private let deleteDisneyMediaItemsService: DeleteDisneyMediaItemServiceProtocol
     
-    private init(
+    init(
         fetchDisneyMediaItemsService: FetchDisneyMediaItemsServiceProtocol = CDFetchDisneyMediaItemsService(),
         saveDisneyMediaItemsService: SaveDisneyMediaItemServiceProtocol = CDSaveDisneyMediaItemService(),
         updateDisneyMediaItemsService: UpdateDisneyMediaItemServiceProtocol = CDUpdateDisneyMediaItemService(),
@@ -31,11 +32,14 @@ final class DisneyMediaItemsManager: DisneyMediaItemsManagerProtocol {
 }
 
 extension DisneyMediaItemsManager {
-    func fetch() async -> Result<Void, DisneyMediaItemsManagerError> {
+    func setup() async -> Result<Void, DisneyMediaItemsManagerError> {
+        guard !initialized else { return .success(()) }
+        
         let result = await fetchDisneyMediaItemsService.fetch()
         switch result {
         case .success(let model):
             mediaItems = model
+            initialized = true
             return .success(())
         case .failure(let error):
             return .failure(toDomainError(error))
@@ -72,16 +76,16 @@ extension DisneyMediaItemsManager {
         }
     }
     
-    func delete(_ mediaItem: DisneyMediaItem) async -> Result<Void, DisneyMediaItemsManagerError> {
+    func delete(name: String, mediaType: DisneyMediaItemType) async -> Result<Void, DisneyMediaItemsManagerError> {
         guard
             let index = mediaItems.firstIndex(where: {
-                $0.name == mediaItem.name && $0.mediaType == mediaItem.mediaType
+                $0.name == name && $0.mediaType == mediaType
             })
         else {
             return .failure(.notFound)
         }
         
-        let result = await updateDisneyMediaItemsService.update(mediaItem)
+        let result = await deleteDisneyMediaItemsService.delete(name: name, mediaType: mediaType)
         switch result {
         case .success:
             mediaItems.remove(at: index)

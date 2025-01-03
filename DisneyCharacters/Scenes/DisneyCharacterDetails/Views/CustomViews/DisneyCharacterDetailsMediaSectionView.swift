@@ -9,20 +9,30 @@ import SwiftUI
 
 struct DisneyCharacterDetailsMediaSectionView: View {
     @EnvironmentObject private var viewModel: DisneyCharacterDetailsViewModel
-    @State private var selectedMediaType: DisneyCharacterDetailsMediaType
+    @State private var selectedMediaType: DisneyMediaItemType
     
-    init(initialSelectedMediaType: DisneyCharacterDetailsMediaType) {
+    init(initialSelectedMediaType: DisneyMediaItemType) {
         self._selectedMediaType = State(wrappedValue: initialSelectedMediaType)
     }
     
     @ViewBuilder func getMediaItemsView(
         medias: [String],
-        mediaType: DisneyCharacterDetailsMediaType
+        mediaType: DisneyMediaItemType
     ) -> some View {
         ForEach(medias, id: \.self) { media in
             Menu {
-                Button("Adicionar à Minha Lista", systemImage: "plus") {
-                    print("add")
+                if viewModel.isSavedMediaItem(name: media, mediaItemType: mediaType) {
+                    Button("Remover da Minha Lista", systemImage: "plus") {
+                        Task {
+                            await viewModel.deleteMediaItem(name: media, mediaItemType: mediaType)
+                        }
+                    }
+                } else {
+                    Button("Adicionar à Minha Lista", systemImage: "plus") {
+                        Task {
+                            await viewModel.saveMediaItem(name: media, mediaItemType: mediaType)
+                        }
+                    }
                 }
             } label: {
                 DisneyCharacterDetailsMediaMenuLabelView(name: media, mediaType: mediaType)
@@ -34,7 +44,7 @@ struct DisneyCharacterDetailsMediaSectionView: View {
         VStack {
             Picker("Selecione o tipo de mídia", selection: $selectedMediaType) {
                 ForEach(viewModel.availableMediaTypes, id: \.self) { mediaType in
-                    Text(mediaType.title)
+                    Text(mediaType.getTitle())
                 }
             }
             .pickerStyle(.segmented)

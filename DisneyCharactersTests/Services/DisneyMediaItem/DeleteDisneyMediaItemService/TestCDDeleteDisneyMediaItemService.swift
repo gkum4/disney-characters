@@ -43,7 +43,7 @@ extension TestCDDeleteDisneyMediaItemService {
         )
         
         // When
-        let result = await sut.delete(domainModel)
+        let result = await sut.delete(name: domainModel.name, mediaType: domainModel.mediaType)
         
         // Then
         guard case .success = result else {

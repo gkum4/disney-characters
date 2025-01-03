@@ -8,5 +8,5 @@
 import Foundation
 
 protocol DeleteDisneyMediaItemServiceProtocol {
-    func delete(_ mediaItem: DisneyMediaItem) async -> Result<Void, ServiceError>
+    func delete(name: String, mediaType: DisneyMediaItemType) async -> Result<Void, ServiceError>
 }

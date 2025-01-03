@@ -8,9 +8,11 @@
 import UIKit
 
 class TabBarController: UITabBarController {
+    let viewModel: TabBarViewModel
     private weak var coordinator: TabBarCoordinatorProtocol?
     
-    private init(coordinator: TabBarCoordinatorProtocol) {
+    private init(viewModel: TabBarViewModel, coordinator: TabBarCoordinatorProtocol) {
+        self.viewModel = viewModel
         self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
     }
@@ -23,12 +25,14 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         
         setupTabBarAppearance()
+        
+        Task {
+            await viewModel.setup()
+        }
     }
     
     private func setupTabBarAppearance() {
         let appearance = UITabBarAppearance()
-        appearance.configureWithTransparentBackground()
-        appearance.backgroundEffect = UIBlurEffect(style: .light)
         appearance.stackedLayoutAppearance = {
             let itemAppearance = UITabBarItemAppearance()
             itemAppearance.selected.iconColor = UIColor.purple
@@ -43,6 +47,6 @@ class TabBarController: UITabBarController {
 
 extension TabBarController {
     static func create(coordinator: TabBarCoordinatorProtocol) -> TabBarController {
-        return TabBarController(coordinator: coordinator)
+        return TabBarController(viewModel: TabBarViewModel(), coordinator: coordinator)
     }
 }

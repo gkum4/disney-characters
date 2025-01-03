@@ -11,7 +11,6 @@
 		0C73D58E2D20A557007BBECE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C73D58D2D20A557007BBECE /* SceneDelegate.swift */; };
 		0C73D5952D20A558007BBECE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C73D5942D20A558007BBECE /* Assets.xcassets */; };
 		0C73D5982D20A558007BBECE /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 0C73D5972D20A558007BBECE /* Base */; };
-		0C73D5A32D20A558007BBECE /* DisneyCharactersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C73D5A22D20A558007BBECE /* DisneyCharactersTests.swift */; };
 		0C73D5AD2D20A558007BBECE /* DisneyCharactersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C73D5AC2D20A558007BBECE /* DisneyCharactersUITests.swift */; };
 		0C73D5AF2D20A558007BBECE /* DisneyCharactersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C73D5AE2D20A558007BBECE /* DisneyCharactersUITestsLaunchTests.swift */; };
 		0C8351512D20C0A9005384A9 /* DisneyCharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8351502D20C0A9005384A9 /* DisneyCharactersViewController.swift */; };
@@ -84,7 +83,6 @@
 		0C83526B2D23297E005384A9 /* DisneyCharacterDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83526A2D23297E005384A9 /* DisneyCharacterDetailsCoordinator.swift */; };
 		0C83526E2D2330D6005384A9 /* DisneyCharacterDetailsMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83526D2D2330D6005384A9 /* DisneyCharacterDetailsMetrics.swift */; };
 		0C8352732D233CB2005384A9 /* DisneyCharacterDetailsMediaSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352722D233CB2005384A9 /* DisneyCharacterDetailsMediaSectionView.swift */; };
-		0C8352752D234197005384A9 /* DisneyCharacterDetailsMediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352742D234197005384A9 /* DisneyCharacterDetailsMediaType.swift */; };
 		0C8352772D2346B9005384A9 /* DisneyCharacterDetailsMediaMenuLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352762D2346B9005384A9 /* DisneyCharacterDetailsMediaMenuLabelView.swift */; };
 		0C8352792D2349D5005384A9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352782D2349D5005384A9 /* Colors.swift */; };
 		0C83527F2D2364EB005384A9 /* CDFetchFavoritedDisneyCharactersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83527E2D2364EB005384A9 /* CDFetchFavoritedDisneyCharactersService.swift */; };
@@ -144,6 +142,12 @@
 		0C8353722D2774A9005384A9 /* DisneyMediaItemsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8353712D2774A9005384A9 /* DisneyMediaItemsManager.swift */; };
 		0C8353752D2774BF005384A9 /* DisneyMediaItemsManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8353742D2774BF005384A9 /* DisneyMediaItemsManagerProtocol.swift */; };
 		0C8353782D277507005384A9 /* DisneyMediaItemsManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8353772D277507005384A9 /* DisneyMediaItemsManagerError.swift */; };
+		0C83537B2D277A1C005384A9 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83537A2D277A1C005384A9 /* TabBarViewModel.swift */; };
+		0C8353802D278189005384A9 /* MyListSectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83537F2D278189005384A9 /* MyListSectionData.swift */; };
+		0C8353832D278BD5005384A9 /* MyListMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8353822D278BD5005384A9 /* MyListMetrics.swift */; };
+		0C8353852D279529005384A9 /* MyListSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8353842D279529005384A9 /* MyListSectionView.swift */; };
+		0C8353892D279678005384A9 /* MyListReviewAlertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8353882D279678005384A9 /* MyListReviewAlertModifier.swift */; };
+		0C83538B2D283579005384A9 /* View+MyListReviewAlertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83538A2D283579005384A9 /* View+MyListReviewAlertModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,7 +175,6 @@
 		0C73D5972D20A558007BBECE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C73D5992D20A558007BBECE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C73D59E2D20A558007BBECE /* DisneyCharactersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DisneyCharactersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C73D5A22D20A558007BBECE /* DisneyCharactersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharactersTests.swift; sourceTree = "<group>"; };
 		0C73D5A82D20A558007BBECE /* DisneyCharactersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DisneyCharactersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C73D5AC2D20A558007BBECE /* DisneyCharactersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharactersUITests.swift; sourceTree = "<group>"; };
 		0C73D5AE2D20A558007BBECE /* DisneyCharactersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharactersUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -245,7 +248,6 @@
 		0C83526A2D23297E005384A9 /* DisneyCharacterDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharacterDetailsCoordinator.swift; sourceTree = "<group>"; };
 		0C83526D2D2330D6005384A9 /* DisneyCharacterDetailsMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharacterDetailsMetrics.swift; sourceTree = "<group>"; };
 		0C8352722D233CB2005384A9 /* DisneyCharacterDetailsMediaSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharacterDetailsMediaSectionView.swift; sourceTree = "<group>"; };
-		0C8352742D234197005384A9 /* DisneyCharacterDetailsMediaType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharacterDetailsMediaType.swift; sourceTree = "<group>"; };
 		0C8352762D2346B9005384A9 /* DisneyCharacterDetailsMediaMenuLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharacterDetailsMediaMenuLabelView.swift; sourceTree = "<group>"; };
 		0C8352782D2349D5005384A9 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		0C83527E2D2364EB005384A9 /* CDFetchFavoritedDisneyCharactersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDFetchFavoritedDisneyCharactersService.swift; sourceTree = "<group>"; };
@@ -305,6 +307,12 @@
 		0C8353712D2774A9005384A9 /* DisneyMediaItemsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyMediaItemsManager.swift; sourceTree = "<group>"; };
 		0C8353742D2774BF005384A9 /* DisneyMediaItemsManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyMediaItemsManagerProtocol.swift; sourceTree = "<group>"; };
 		0C8353772D277507005384A9 /* DisneyMediaItemsManagerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyMediaItemsManagerError.swift; sourceTree = "<group>"; };
+		0C83537A2D277A1C005384A9 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
+		0C83537F2D278189005384A9 /* MyListSectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListSectionData.swift; sourceTree = "<group>"; };
+		0C8353822D278BD5005384A9 /* MyListMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListMetrics.swift; sourceTree = "<group>"; };
+		0C8353842D279529005384A9 /* MyListSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListSectionView.swift; sourceTree = "<group>"; };
+		0C8353882D279678005384A9 /* MyListReviewAlertModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListReviewAlertModifier.swift; sourceTree = "<group>"; };
+		0C83538A2D283579005384A9 /* View+MyListReviewAlertModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+MyListReviewAlertModifier.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -376,7 +384,6 @@
 				0C8351ED2D21F79E005384A9 /* Services */,
 				0C8351612D20C478005384A9 /* Scenes */,
 				0C8351D32D21F41B005384A9 /* TestDoubles */,
-				0C73D5A22D20A558007BBECE /* DisneyCharactersTests.swift */,
 			);
 			path = DisneyCharactersTests;
 			sourceTree = "<group>";
@@ -798,6 +805,7 @@
 			children = (
 				0C83525B2D22FB59005384A9 /* Coordinator */,
 				0C83523C2D22437F005384A9 /* Enums */,
+				0C8353792D277A05005384A9 /* ViewModel */,
 				0C8352362D224139005384A9 /* TabBarController.swift */,
 			);
 			path = TabBar;
@@ -869,6 +877,7 @@
 				0C83526C2D2330CB005384A9 /* Enums */,
 				0C8352662D232963005384A9 /* ViewModel */,
 				0C8352632D2328A2005384A9 /* Views */,
+				0C8352642D232960005384A9 /* DisneyCharacterDetailsView.swift */,
 			);
 			path = DisneyCharacterDetails;
 			sourceTree = "<group>";
@@ -877,7 +886,6 @@
 			isa = PBXGroup;
 			children = (
 				0C83526F2D2338B3005384A9 /* CustomViews */,
-				0C8352642D232960005384A9 /* DisneyCharacterDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -902,7 +910,6 @@
 			isa = PBXGroup;
 			children = (
 				0C83526D2D2330D6005384A9 /* DisneyCharacterDetailsMetrics.swift */,
-				0C8352742D234197005384A9 /* DisneyCharacterDetailsMediaType.swift */,
 				0C8353072D270B24005384A9 /* DisneyCharacterDetailsError.swift */,
 			);
 			path = Enums;
@@ -1183,8 +1190,12 @@
 			isa = PBXGroup;
 			children = (
 				0C83532C2D2734F0005384A9 /* Coordinator */,
+				0C8353862D27965E005384A9 /* ViewModifiers */,
+				0C8353812D278BCC005384A9 /* Enums */,
+				0C83537E2D278171005384A9 /* Models */,
 				0C83532B2D2734EB005384A9 /* ViewModel */,
 				0C83532A2D2734E6005384A9 /* Views */,
+				0C83532F2D2735CF005384A9 /* MyListView.swift */,
 			);
 			path = MyList;
 			sourceTree = "<group>";
@@ -1192,7 +1203,7 @@
 		0C83532A2D2734E6005384A9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0C83532F2D2735CF005384A9 /* MyListView.swift */,
+				0C8353842D279529005384A9 /* MyListSectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1416,6 +1427,47 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
+		0C8353792D277A05005384A9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0C83537A2D277A1C005384A9 /* TabBarViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C83537E2D278171005384A9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0C83537F2D278189005384A9 /* MyListSectionData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0C8353812D278BCC005384A9 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				0C8353822D278BD5005384A9 /* MyListMetrics.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		0C8353862D27965E005384A9 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				0C8353872D279669005384A9 /* MyListReviewAlertModifier */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		0C8353872D279669005384A9 /* MyListReviewAlertModifier */ = {
+			isa = PBXGroup;
+			children = (
+				0C8353882D279678005384A9 /* MyListReviewAlertModifier.swift */,
+				0C83538A2D283579005384A9 /* View+MyListReviewAlertModifier.swift */,
+			);
+			path = MyListReviewAlertModifier;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1552,17 +1604,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C83537B2D277A1C005384A9 /* TabBarViewModel.swift in Sources */,
 				0C8353322D273602005384A9 /* MyListViewModel.swift in Sources */,
 				0C83526E2D2330D6005384A9 /* DisneyCharacterDetailsMetrics.swift in Sources */,
 				0C83516F2D20CB41005384A9 /* ServiceError.swift in Sources */,
 				0C8351762D20CE66005384A9 /* HTTPTaskResult.swift in Sources */,
 				0C83530B2D270E0F005384A9 /* LoaderOverlayModifier.swift in Sources */,
-				0C8352752D234197005384A9 /* DisneyCharacterDetailsMediaType.swift in Sources */,
 				0C83525F2D22FCDA005384A9 /* AppCoordinator.swift in Sources */,
 				0C83530E2D271056005384A9 /* View+LoaderOverlayModifier.swift in Sources */,
 				0C83515F2D20C44C005384A9 /* DisneyCharactersViewModel.swift in Sources */,
 				0C8353162D27194D005384A9 /* ToastModifier.swift in Sources */,
 				0C8351A32D20FC5A005384A9 /* FetchDisneyCharacterRequestBuilder.swift in Sources */,
+				0C8353802D278189005384A9 /* MyListSectionData.swift in Sources */,
 				0C83518A2D20F3C2005384A9 /* DisneyCharacterResponse.swift in Sources */,
 				0C8353412D273C97005384A9 /* DisneyMediaItem.swift in Sources */,
 				0C8351962D20F6B8005384A9 /* DisneyCharactersPageInfoResponse.swift in Sources */,
@@ -1586,6 +1639,7 @@
 				0C8353382D273B84005384A9 /* CDDisneyMediaItem+Mock.swift in Sources */,
 				0C8352432D2247C7005384A9 /* UIViewController+DismissKeyboard.swift in Sources */,
 				0C83517A2D20CF5E005384A9 /* URLSession+HTTPClientProtocol.swift in Sources */,
+				0C8353832D278BD5005384A9 /* MyListMetrics.swift in Sources */,
 				0C8351942D20F6A0005384A9 /* DisneyCharactersPageResponse.swift in Sources */,
 				0C8352C02D237E43005384A9 /* CDFavoritedDisneyCharacter+Mock.swift in Sources */,
 				0C83533F2D273C76005384A9 /* FetchDisneyMediaItemsServiceProtocol.swift in Sources */,
@@ -1598,10 +1652,12 @@
 				0C8351C02D210B38005384A9 /* FetchDisneyCharacterMapper.swift in Sources */,
 				0C8352282D223832005384A9 /* UIStackView+Append.swift in Sources */,
 				0C83516B2D20C91C005384A9 /* FetchDisneyCharacterServiceProtocol.swift in Sources */,
+				0C83538B2D283579005384A9 /* View+MyListReviewAlertModifier.swift in Sources */,
 				0C8351CE2D21F288005384A9 /* HTTPTaskErrorMapperProtocol.swift in Sources */,
 				0C8351732D20CD98005384A9 /* HTTPClientProtocol.swift in Sources */,
 				0C8352262D2233B4005384A9 /* DisneyCharactersMetrics.swift in Sources */,
 				0C83531D2D2723BB005384A9 /* ToastModifierMetrics.swift in Sources */,
+				0C8353892D279678005384A9 /* MyListReviewAlertModifier.swift in Sources */,
 				0C83528D2D236849005384A9 /* DisneyCharacters.xcdatamodeld in Sources */,
 				0C8352582D22F373005384A9 /* CoordinatorProtocol.swift in Sources */,
 				0C83522A2D2238AF005384A9 /* UIView+Append.swift in Sources */,
@@ -1634,6 +1690,7 @@
 				0C8353532D276240005384A9 /* DeleteDisneyMediaItemServiceProtocol.swift in Sources */,
 				0C8352682D23296D005384A9 /* DisneyCharacterDetailsViewModel.swift in Sources */,
 				0C8351DD2D21F559005384A9 /* RemoteFetchDisneyCharactersPageService.swift in Sources */,
+				0C8353852D279529005384A9 /* MyListSectionView.swift in Sources */,
 				0C8352792D2349D5005384A9 /* Colors.swift in Sources */,
 				0C83526B2D23297E005384A9 /* DisneyCharacterDetailsCoordinator.swift in Sources */,
 				0C8353352D273AE2005384A9 /* CDDisneyMediaItem.swift in Sources */,
@@ -1681,7 +1738,6 @@
 				0C8351FA2D220087005384A9 /* TestFetchDisneyCharactersPageRequestBuilder.swift in Sources */,
 				0C8353282D272F5E005384A9 /* StubDeleteFavoritedDisneyCharacterService.swift in Sources */,
 				0C8352C32D237F60005384A9 /* TestCDSaveFavoritedDisneyCharacterService.swift in Sources */,
-				0C73D5A32D20A558007BBECE /* DisneyCharactersTests.swift in Sources */,
 				0C8351FE2D220289005384A9 /* StubDecodeMapper.swift in Sources */,
 				0C8351EC2D21F74A005384A9 /* StubServiceTaskErrorMapper.swift in Sources */,
 				0C8353252D272F0C005384A9 /* StubSaveFavoritedDisneyCharacterService.swift in Sources */,
