@@ -13,6 +13,7 @@
 		0C73D5952D20A558007BBECE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C73D5942D20A558007BBECE /* Assets.xcassets */; };
 		0C73D5AD2D20A558007BBECE /* DisneyCharactersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C73D5AC2D20A558007BBECE /* DisneyCharactersUITests.swift */; };
 		0C73D5AF2D20A558007BBECE /* DisneyCharactersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C73D5AE2D20A558007BBECE /* DisneyCharactersUITestsLaunchTests.swift */; };
+		0C8029AD2D353D8000712E2B /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8029AC2D353D8000712E2B /* CoordinatorProtocol.swift */; };
 		0C8351512D20C0A9005384A9 /* DisneyCharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8351502D20C0A9005384A9 /* DisneyCharactersViewController.swift */; };
 		0C83515F2D20C44C005384A9 /* DisneyCharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83515E2D20C44C005384A9 /* DisneyCharactersViewModel.swift */; };
 		0C8351642D20C48A005384A9 /* TestDisneyCharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8351632D20C48A005384A9 /* TestDisneyCharactersViewModel.swift */; };
@@ -74,7 +75,6 @@
 		0C83523E2D224386005384A9 /* TabBarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83523D2D224386005384A9 /* TabBarPage.swift */; };
 		0C8352432D2247C7005384A9 /* UIViewController+DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352422D2247C7005384A9 /* UIViewController+DismissKeyboard.swift */; };
 		0C8352532D22EAEC005384A9 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352522D22EAEC005384A9 /* CustomViewController.swift */; };
-		0C8352582D22F373005384A9 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352572D22F373005384A9 /* CoordinatorProtocol.swift */; };
 		0C83525D2D22FB60005384A9 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83525C2D22FB60005384A9 /* TabBarCoordinator.swift */; };
 		0C83525F2D22FCDA005384A9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83525E2D22FCDA005384A9 /* AppCoordinator.swift */; };
 		0C8352612D22FDAF005384A9 /* DisneyCharactersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8352602D22FDAF005384A9 /* DisneyCharactersCoordinator.swift */; };
@@ -183,6 +183,7 @@
 		0C73D5A82D20A558007BBECE /* DisneyCharactersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DisneyCharactersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C73D5AC2D20A558007BBECE /* DisneyCharactersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharactersUITests.swift; sourceTree = "<group>"; };
 		0C73D5AE2D20A558007BBECE /* DisneyCharactersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharactersUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0C8029AC2D353D8000712E2B /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		0C8351502D20C0A9005384A9 /* DisneyCharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharactersViewController.swift; sourceTree = "<group>"; };
 		0C83515E2D20C44C005384A9 /* DisneyCharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharactersViewModel.swift; sourceTree = "<group>"; };
 		0C8351632D20C48A005384A9 /* TestDisneyCharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDisneyCharactersViewModel.swift; sourceTree = "<group>"; };
@@ -244,7 +245,6 @@
 		0C83523D2D224386005384A9 /* TabBarPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPage.swift; sourceTree = "<group>"; };
 		0C8352422D2247C7005384A9 /* UIViewController+DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+DismissKeyboard.swift"; sourceTree = "<group>"; };
 		0C8352522D22EAEC005384A9 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
-		0C8352572D22F373005384A9 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoordinatorProtocol.swift; path = "../../../../../../../.Trash/Coordinator 12-27-30-368/Protocols/CoordinatorProtocol.swift"; sourceTree = "<group>"; };
 		0C83525C2D22FB60005384A9 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		0C83525E2D22FCDA005384A9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		0C8352602D22FDAF005384A9 /* DisneyCharactersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharactersCoordinator.swift; sourceTree = "<group>"; };
@@ -399,6 +399,14 @@
 				0C73D5AE2D20A558007BBECE /* DisneyCharactersUITestsLaunchTests.swift */,
 			);
 			path = DisneyCharactersUITests;
+			sourceTree = "<group>";
+		};
+		0C8029AB2D353D6900712E2B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0C8029AC2D353D8000712E2B /* CoordinatorProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		0C83514A2D20BECF005384A9 /* Scenes */ = {
@@ -854,18 +862,10 @@
 		0C8352552D22F368005384A9 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				0C8352562D22F36C005384A9 /* Protocols */,
+				0C8029AB2D353D6900712E2B /* Protocols */,
 				0C83525E2D22FCDA005384A9 /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		0C8352562D22F36C005384A9 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				0C8352572D22F373005384A9 /* CoordinatorProtocol.swift */,
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		0C83525B2D22FB59005384A9 /* Coordinator */ = {
@@ -1713,7 +1713,6 @@
 				0C8352262D2233B4005384A9 /* DisneyCharactersMetrics.swift in Sources */,
 				0C83531D2D2723BB005384A9 /* ToastModifierMetrics.swift in Sources */,
 				0C8353892D279678005384A9 /* MyListReviewAlertModifier.swift in Sources */,
-				0C8352582D22F373005384A9 /* CoordinatorProtocol.swift in Sources */,
 				0C83522A2D2238AF005384A9 /* UIView+Append.swift in Sources */,
 				0C8353672D27689E005384A9 /* UpdateDisneyMediaItemServiceProtocol.swift in Sources */,
 				0C8352C92D2380D9005384A9 /* DeleteFavoritedDisneyCharacterServiceProtocol.swift in Sources */,
@@ -1731,6 +1730,7 @@
 				0C8352242D22337D005384A9 /* GlobalLayoutMetrics.swift in Sources */,
 				0C8351C82D219279005384A9 /* HTTPTaskResultMapperProtocol.swift in Sources */,
 				0C8352372D224139005384A9 /* TabBarController.swift in Sources */,
+				0C8029AD2D353D8000712E2B /* CoordinatorProtocol.swift in Sources */,
 				0C8353482D273DFB005384A9 /* CDFetchDisneyMediaItemMapper.swift in Sources */,
 				0C8353082D270B24005384A9 /* DisneyCharacterDetailsError.swift in Sources */,
 				0C8351DF2D21F577005384A9 /* FetchDisneyCharactersPageServiceProtocol.swift in Sources */,
